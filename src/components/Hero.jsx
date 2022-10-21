@@ -29,7 +29,7 @@ const Hero = () => {
             <EventDataItem>
               <DateComponent className="event-data">
                 <p>
-                  NOV. 10-13 <DateHighlight>-12PM UTC-</DateHighlight>
+                  NOV. 10-13 • <DateHighlight>-12PM UTC</DateHighlight> •
                 </p>
                 <DateLocation>FESTIVAL LAND, [-62,70]</DateLocation>
               </DateComponent>
@@ -130,28 +130,21 @@ const DateComponent = styled.section`
   font-size: 26px;
   font-weight: 500;
   line-height: 88%;
+  font-family: 'Yapari Expanded';
   padding-left: 0;
   width: 100%;
   text-align: center;
-  letter-spacing: 3px;
+  letter-spacing: 14px;
 
   @media screen and (min-width: ${breakpoints.md}) {
     font-size: 18px;
-    letter-spacing: 0;
     text-align: center;
   }
 
   @media screen and (min-width: ${breakpoints.l}) {
     font-size: 26px;
     line-height: 88%;
-    letter-spacing: 16px;
     width: 100%;
-  }
-
-  @media screen and (min-width: ${breakpoints.xl}) {
-    font-size: 32px;
-    line-height: 88%;
-    letter-spacing: 12px;
   }
 `;
 
@@ -160,6 +153,7 @@ const DateHighlight = styled.span`
 `;
 
 const DateLocation = styled.span`
+  font-family: 'Yapari';
   font-size: 36px;
   font-weight: 600;
   line-height: 72px;
