@@ -4,6 +4,7 @@ import Button from "./Button";
 import theme, { breakpoints } from "../../utils/theme";
 import mvmfLogo from "../images/logo-metaverse.svg";
 import dclLogo from "../images/logo-dcl.svg";
+import star from "../images/star.svg";
 import whiteRabbit from "../images/rabbit.svg";
 import polygon from "../images/STD-polygon.svg";
 import { Container } from "./Container";
@@ -28,7 +29,7 @@ const Hero = () => {
             <EventDataItem>
               <DateComponent className="event-data">
                 <p>
-                  NOV. 10-13 <DateHighlight>-12 PM UTC-</DateHighlight>
+                  NOV. 10-13 <DateHighlight>-12PM UTC-</DateHighlight>
                 </p>
                 <DateLocation>FESTIVAL LAND, [-62,70]</DateLocation>
               </DateComponent>
@@ -50,6 +51,20 @@ const Hero = () => {
               </SaveTheDate>
             </EventDataItem>
           </EventDataBottom>
+          <Decorator
+            src={star}
+            top="50%"
+            left="-60px"
+            width="22px"
+            height="62px"
+          />
+          <Decorator
+            src={star}
+            top="50%"
+            right="-60px"
+            width="22px"
+            height="62px"
+          />
         </EventDetails>
       </Container>
     </StyledHero>
@@ -74,6 +89,7 @@ const StyledImage = styled.img`
 `;
 
 const EventDetails = styled.div`
+  position: relative;
   padding: 0 121px;
   border-left: 3px solid white;
   border-right: 3px solid white;
@@ -112,7 +128,8 @@ const EventDataItem = styled.div`
 
 const DateComponent = styled.section`
   font-size: 26px;
-  line-height: 32px;
+  font-weight: 500;
+  line-height: 88%;
   padding-left: 0;
   width: 100%;
   text-align: center;
@@ -126,15 +143,15 @@ const DateComponent = styled.section`
 
   @media screen and (min-width: ${breakpoints.l}) {
     font-size: 26px;
-    line-height: 32px;
+    line-height: 88%;
     letter-spacing: 16px;
     width: 100%;
   }
 
   @media screen and (min-width: ${breakpoints.xl}) {
-    font-size: 26px;
-    line-height: 32px;
-    letter-spacing: 16px;
+    font-size: 32px;
+    line-height: 88%;
+    letter-spacing: 12px;
   }
 `;
 
@@ -166,12 +183,13 @@ const SaveTheDate = styled(Button)`
 
 const Decorator = styled.img`
   position: absolute;
-  width: 16px;
-  height: 18px;
-  left: ${(props) => `${props.left}px` || null};
-  top: ${(props) => `${props.top}px` || null};
-  bottom: ${(props) => `${props.bottom}px` || null};
-  right: ${(props) => `${props.right}px` || null};
+  transform: translateY(-50%);
+  width: ${(props) => `${props.width}`};
+  height: ${(props) => `${props.height}`};
+  left: ${(props) => `${props.left}` || null};
+  top: ${(props) => `${props.top}` || null};
+  bottom: ${(props) => `${props.bottom}` || null};
+  right: ${(props) => `${props.right}` || null};
 `;
 
 const WhiteRabbit = styled.img`
