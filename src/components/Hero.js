@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Button from './Button'
 import Countdown from './Countdown'
 import theme, { breakpoints } from "../../utils/theme"
-import mvmfLogo from '../images/logo-metaverse.png'
+import mvmfLogo from '../images/logo-metaverse.svg'
 import dclLogo from '../images/logo-dcl.svg'
 import decorator from '../images/corner_decoration.svg'
 import whiteRabbit from '../images/rabbit.svg'
