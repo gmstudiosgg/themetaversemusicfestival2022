@@ -14,7 +14,7 @@ const Navbar = (props) => {
       targetId: "about",
     },
     {
-      label: "LINEUP",
+      label: "LINE UP",
       targetId: "lineup",
     },
     {
@@ -130,7 +130,7 @@ const StyledNavbar = styled.section`
   position: fixed;
 
   /* Agregado fede */
-  border-bottom: solid 3px ${theme.accent};
+  border-bottom: solid 5px ${theme.accent};
   display: flex;
   justify-content: space-between;
   /* ---------------- */
@@ -183,54 +183,12 @@ const StyledNavbar = styled.section`
       width: 50px;
       margin-bottom: 30px;
     }
-    /* ul {
-      li {
-        font-size: 64px;
-        padding: 10px 0;
-        border-bottom: 1px solid black;
-        @media screen and (max-width: ${breakpoints.md}) {
-          font-size: 48px;
-        }
-        a {
-          -webkit-text-stroke: 1px black;
-          color: transparent;
-          &:hover {
-            color: black;
-          }
-        }
-      }
-    } */
     &.open {
       bottom: 0;
       opacity: 1;
       pointer-events: unset;
     }
   }
-  /* nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    ul {
-      display: flex;
-      justify-content: space-between;
-      padding: 12px 80px;
-      @media screen and (max-width: ${breakpoints.md}) {
-        display: none;
-      }
-      li {
-        font-size: 23px;
-        a {
-          cursor: pointer;
-          font-family: "SpaceMono";
-          opacity: 0.8;
-          &:hover {
-            opacity: 1;
-          }
-        }
-      }
-    }
-  } */
 `;
 
 const SocialIcon = styled.img`
@@ -252,6 +210,7 @@ const MenuItem = styled.li`
   font-size: 16px;
   font-weight: 700;
   padding-left: 40px;
+  letter-spacing: 2px;
 `;
 
 const MenuList = styled.ul`
