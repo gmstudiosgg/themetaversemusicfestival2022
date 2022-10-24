@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import theme, { breakpoints } from "../../utils/theme";
 import { StaticImage } from "gatsby-plugin-image";
-import twitter from "../images/Vector-3.svg";
-import discord from "../images/Vector.svg";
-import openSea from "../images/Vector-openSea.svg";
+import { Twitter } from "../components/icons/Vector-Twitter.js";
+import { Discord } from "../components/icons/Vector-Discord.js";
+import { OpenSea } from "../components/icons/Vector-openSea.js";
 
 const Navbar = (props) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -61,27 +61,27 @@ const Navbar = (props) => {
             </MenuList>
           </div>
           <div>
-            <a
+            <SocialIcon
               href="https://twitter.com/decentraland"
               target="_blank"
               rel="noreferrer"
             >
-              <SocialIcon src={twitter} />
-            </a>
-            <a
+              <Twitter />
+            </SocialIcon>
+            <SocialIcon
               href="https://decentraland.org/discord/"
               target="_blank"
               rel="noreferrer"
             >
-              <SocialIcon src={discord} />
-            </a>
-            <a
+              <Discord />
+            </SocialIcon>
+            <SocialIcon
               href="https://www.instagram.com/decentraland_foundation/"
               target="_blank"
               rel="noreferrer"
             >
-              <SocialIcon src={openSea} />
-            </a>
+              <OpenSea />
+            </SocialIcon>
           </div>
         </Nav>
         <div
@@ -128,6 +128,7 @@ const StyledNavbar = styled.section`
   width: 100%;
   z-index: 100;
   position: fixed;
+  background-color: black;
 
   /* Agregado fede */
   border-bottom: solid 5px ${theme.accent};
@@ -191,10 +192,22 @@ const StyledNavbar = styled.section`
   }
 `;
 
-const SocialIcon = styled.img`
-  width: 24px;
-  height: 24px;
+const SocialIcon = styled.a`
   margin-left: 24px;
+  svg {
+    width: 24px;
+    height: 24px;
+
+    path {
+      transition: fill 0.4s ease;
+    }
+
+    :hover {
+      path {
+        fill: ${theme.accent};
+      }
+    }
+  }
 `;
 
 const Nav = styled.nav`

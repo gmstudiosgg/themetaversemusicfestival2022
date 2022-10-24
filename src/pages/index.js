@@ -6,6 +6,7 @@ import Hero from "./../components/Hero";
 import Banner from "../components/Banner";
 import StarsScene from "../components/Stars";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 const seo = {
   title: "Metaverse Music Festival | Decentraland",
