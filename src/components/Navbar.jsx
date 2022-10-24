@@ -211,6 +211,14 @@ const MenuItem = styled.li`
   font-weight: 700;
   padding-left: 40px;
   letter-spacing: 2px;
+
+  a {
+    transition: color 0.5s ease;
+  }
+
+  a:hover {
+    color: ${theme.accent};
+  }
 `;
 
 const MenuList = styled.ul`
