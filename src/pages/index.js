@@ -70,6 +70,7 @@ const IndexPage = () => {
       </Helmet>
       <Layout>
         <header>
+          <Navbar />
           <Hero />
           <Footer />
         </header>
