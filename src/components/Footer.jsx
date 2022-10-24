@@ -1,26 +1,43 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Discord from "./../images/Vector.svg";
-import Instagram from "./../images/Vector-4.svg";
-import Twitter from "./../images/Vector-3.svg";
-import { breakpoints } from "../../utils/theme";
+import { Discord } from "./icons/Vector-Discord.js";
+import { Twitter } from "./icons/Vector-Twitter.js";
+import { OpenSea } from "./icons/Vector-openSea";
+import theme, { breakpoints } from "../../utils/theme";
+import dclLogo from "../images/logo-dcl.svg";
 
 const Footer = (props) => {
+  const pages = [
+    {
+      name: "TERM & SERVICES",
+      url: "#",
+    },
+    {
+      name: "PRIVACY POLICIES",
+      url: "#",
+    },
+    {
+      name: "PRESS KIT",
+      url: "#",
+    },
+  ];
+
   const socialLinks = [
+    {
+      name: "Twitter",
+      file: Twitter,
+      url: "https://twitter.com/decentraland",
+    },
     {
       name: "Discord",
       file: Discord,
       url: "https://discord.com/invite/JV8CbCx",
     },
     {
-      name: "Instagram",
-      file: Instagram,
-      url: "https://github.com/decentraland",
-    },
-    {
-      name: "Twitter",
-      file: Twitter,
-      url: "https://twitter.com/decentraland",
+      name: "Open Sea",
+      file: OpenSea,
+      // cambiar url a correcta
+      url: "https://www.reddit.com/r/decentraland/",
     },
   ];
   return (
@@ -30,79 +47,105 @@ const Footer = (props) => {
             <a href="MusicFestivalGeneralInfo.pdf" download>Press Kit</a>
 
         </div> */}
-      <div className="copyright">
-        <a href="https://decentraland.org/">© 2022 Decentraland</a>
-      </div>
-      <div className="social-links">
-        <ul className="social-links-list">
-          {socialLinks.map((socialLink) => (
-            <li key={socialLink.name} className="">
-              <a target="_blank" href={socialLink.url}>
-                <img src={socialLink.file} />
+      <StyledLogoContainer>
+        <a href="https://play.decentraland.org/" target="_blank">
+          <StyledLogo alt={"Decentraland Logo"} src={dclLogo} />
+        </a>
+      </StyledLogoContainer>
+      <StyledLinks>
+        <StyledLinksList>
+          {pages.map((page) => (
+            <PageLink key={page.name}>
+              <a target="_blank" href={page.url}>
+                {page.name}
               </a>
-            </li>
+            </PageLink>
           ))}
-        </ul>
-      </div>
+        </StyledLinksList>
+      </StyledLinks>
+      <StyledSocialLinksContainer>
+        <StyledSocialLinks>
+          {socialLinks.map(({ name, url, file: File }) => (
+            <StyledSocialLink key={name}>
+              <a height={100} target="_blank" href={url}>
+                <File />
+                {/* <img src={socialLink.file} width={24} height={24} /> */}
+              </a>
+            </StyledSocialLink>
+          ))}
+        </StyledSocialLinks>
+      </StyledSocialLinksContainer>
     </StyledFooter>
   );
 };
 
 const StyledFooter = styled.footer`
-  padding: 38px 38px;
-  display: flex;
-  color: black;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 48px 62px 40px;
+  background-color: ${theme.black};
+`;
+
+const StyledLogoContainer = styled.div`
+  display: flex;
   align-items: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  @media screen and (max-width: ${breakpoints.md}) {
-    flex-direction: column;
-    align-items: baseline;
-    padding: 12px 24px 52px;
-  }
+`;
+
+const StyledLogo = styled.img`
+  height: 35px;
+  margin-right: 78px;
+`;
+
+const StyledSocialLinksContainer = styled.div`
+  display: flex;
+  align-items: center;
+  vertical-align: center;
+`;
+
+const StyledLinks = styled.div`
+  display: flex;
+  flex: 1;
+`;
+
+const StyledLinksList = styled.ul`
+  display: flex;
+  align-items: center;
+  vertical-align: center;
+`;
+
+const PageLink = styled.li`
+  max-width: 160px;
+  margin-right: 67px;
+  line-height: 22px;
   a {
-    font-family: "Inter";
-    color: white;
+    transition: all 0.4s ease;
   }
-  .primary-links {
-    a {
-      margin-right: 70px;
-    }
-    @media screen and (max-width: ${breakpoints.md}) {
-      margin-bottom: 24px;
-    }
+  a:hover {
+    color: ${theme.accent};
   }
-  .social-links {
-    margin-left: auto;
-    @media screen and (max-width: ${breakpoints.md}) {
-      margin-left: unset;
-    }
-    .social-links-list {
-      display: flex;
-      li {
-        margin-left: 30px;
-        @media screen and (max-width: ${breakpoints.md}) {
-          margin-left: unset;
-          margin-right: 24px;
-        }
-        a {
-          img {
-            width: 32px;
-            opacity: 0.7;
-          }
-        }
-      }
-    }
+`;
+
+const StyledSocialLinks = styled.ul`
+  display: flex;
+  vertical-align: center;
+  align-items: center;
+  justify-content: flex-end;
+
+  a svg {
+    width: 25px;
+    height: 25px;
   }
-  .copyright {
-    color: black;
-    font-family: "Inter";
-    @media screen and (max-width: ${breakpoints.md}) {
-      margin-left: unset;
-      margin-top: 24px;
-      margin-bottom: 24px;
+`;
+
+const StyledSocialLink = styled.li`
+  margin-left: 40px;
+  svg path {
+    transition: all 0.4s ease;
+  }
+  svg:hover {
+    path {
+      fill: ${theme.accent};
     }
   }
 `;

@@ -80,7 +80,7 @@ const StyledHero = styled.div`
   width: 100%;
 `;
 export const LogoContainer = styled.div`
-  padding: 0 66px;
+  padding: 0 33px;
 `;
 
 const StyledImage = styled.img`
