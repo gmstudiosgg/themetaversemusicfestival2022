@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import theme, { breakpoints } from "../../utils/theme";
-import mvmfLogo from "../images/logo-metaverse.svg";
+import mvmfLogo from "../images/logo-metaverse.png";
 import dclLogo from "../images/logo-dcl.svg";
 import star from "../images/star.svg";
 import whiteRabbit from "../images/rabbit.svg";
