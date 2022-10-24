@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { Helmet } from "react-helmet";
-import Layout from "./../components/Layout";
-import Hero from "./../components/Hero";
-import Banner from "../components/Banner";
+import React, { useState } from "react"
+import styled from 'styled-components'
+import { Helmet } from "react-helmet"
+import Layout from './../components/Layout'
+import Hero from './../components/Hero'
+import Banner from "../components/Banner"
+import StarsScene from "../components/Stars"
 
 const seo = {
-  title: "Metaverse Music Festival | Decentraland",
-  description:
-    "A four-day celebration of music, culture and creativity in the virtual social world of Decentraland, the Metaverse Festival is a grand collision of light, sound and portable toilets.",
-  image: "https://themetaversemusicfestival.io/logo-metaverse.png",
-};
+  title: 'Metaverse Music Festival | Decentraland',
+  description: 'A four-day celebration of music, culture and creativity in the virtual social world of Decentraland, the Metaverse Festival is a grand collision of light, sound and portable toilets.',
+  image: 'https://themetaversefestival.io/logo-metaverse.png',
+}
 
 const meta = {
   ...seo,
@@ -72,12 +72,13 @@ const IndexPage = () => {
         </header>
         <main>{showVideo && <Banner setShowVideo={setShowVideo} />}</main>
       </Layout>
+      <StarsScene />
     </StyledIndexPage>
   );
 };
 
 const StyledIndexPage = styled.div`
-  background: ${(props) => props.theme[`black`]};
-`;
+  background: transparent;
+`
 
 export default IndexPage;
