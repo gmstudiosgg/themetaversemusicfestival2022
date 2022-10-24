@@ -130,7 +130,7 @@ const DateComponent = styled.section`
   font-size: 26px;
   font-weight: 500;
   line-height: 88%;
-  font-family: 'Yapari Expanded';
+  font-family: "Yapari Expanded";
   padding-left: 0;
   width: 100%;
   text-align: center;
@@ -153,7 +153,7 @@ const DateHighlight = styled.span`
 `;
 
 const DateLocation = styled.span`
-  font-family: 'Yapari';
+  font-family: "Yapari";
   font-size: 36px;
   font-weight: 600;
   line-height: 72px;
