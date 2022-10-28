@@ -7,6 +7,7 @@ import Banner from "../components/Banner";
 import StarsScene from "../components/Stars";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import BannerMarquee from "../components/Marquee";
 
 const seo = {
   title: "Metaverse Music Festival | Decentraland",
@@ -73,6 +74,7 @@ const IndexPage = () => {
         <header>
           <Navbar />
           <Hero />
+          <BannerMarquee />
           <Footer />
         </header>
         <main>{showVideo && <Banner setShowVideo={setShowVideo} />}</main>
