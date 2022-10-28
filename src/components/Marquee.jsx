@@ -5,8 +5,13 @@ import theme from "../../utils/theme";
 
 const BannerMarquee = (props) => {
   return (
-    <StyledBannerMarquee>
-      <Marquee speed={100} delay={props.delay && props.delay} gradient={false}>
+    <StyledBannerMarquee {...props}>
+      <Marquee
+        direction={props.direction}
+        speed={100}
+        delay={props.delay && props.delay}
+        gradient={false}
+      >
         • [-57,70] ©️DECENTRALAND NOV. 10-13 •
         <DateHighlight> -12PM UTC </DateHighlight> • [-57,70] ©️DECENTRALAND
         NOV. 10-13 •<DateHighlight> -12PM UTC </DateHighlight>
