@@ -34,6 +34,13 @@
 }
 
 @font-face {
+  font-family: "Yapari Ultra Expanded";
+  font-style: normal;
+  font-weight: 500;
+  src: url(./../fonts/Yapari-UltraExpanded.ttf);
+}
+
+@font-face {
   font-family: "Yapari";
   font-style: normal;
   font-weight: 600;
