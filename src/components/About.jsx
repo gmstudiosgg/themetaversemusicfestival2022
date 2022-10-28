@@ -4,6 +4,8 @@ import Button from "./../components/Button";
 // import AboutImage from "./../images/about.png";
 import { breakpoints } from "../../utils/theme";
 import theme from "../../utils/theme";
+import AboutThinIcon from "../images/about-thin-icon.png";
+import EyeTriengleIcon from "../images/eye-triangle-icon.svg";
 
 // const About = (props) => {
 //   return (
@@ -147,10 +149,10 @@ const About = (props) => {
         </AboutHeader>
         <Aboutbody>
           <AboutBodyImgContainer>
-            <AboutBodyImg
-              src="https://via.placeholder.com/150"
-              alt="Imagen de prueba"
-            />
+            <AboutBodyImg>
+              <AboutBodyIcon src={AboutThinIcon} width="18px" height="371px" />
+              <AboutBodyIcon src={EyeTriengleIcon} width="76px" height="76px" />
+            </AboutBodyImg>
           </AboutBodyImgContainer>
           <AboutBodyText>
             <AboutBodyParagraph>
@@ -207,7 +209,10 @@ const Aboutbody = styled.section`
   justify-content: space-between;
 `;
 
+const AboutBodyIcon = styled.img``;
+
 const AboutBodyText = styled.div`
+  font-family: "Roboto", sans-serif;
   width: 60%;
   font-size: 18px;
   line-height: 27px;
@@ -216,7 +221,10 @@ const AboutBodyText = styled.div`
   padding-right: 64px;
 `;
 
-const AboutBodyParagraph = styled.p``;
+const AboutBodyParagraph = styled.p`
+  font-family: "Roboto", sans-serif;
+  max-width: 464px;
+`;
 
 const AboutBodyImgContainer = styled.div`
   display: flex;
@@ -225,9 +233,16 @@ const AboutBodyImgContainer = styled.div`
   width: 40%;
 `;
 
-const AboutBodyImg = styled.img`
+const AboutBodyImg = styled.div`
   width: 70px;
   height: 479px;
+  justify-content: space-between;
+  padding: 5px 0;
+  margin-left: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const TitleTextHighlight = styled.span`
@@ -240,16 +255,16 @@ const TitleTextHighlight = styled.span`
 
 const TextHighlight = styled.span`
   color: ${theme.accent};
-  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 `;
 
 // --------------------------------------------------
 // Necesito:
-// Fuente Roboto en 400 y 600.
+//
 
 // assets:
 // .gif del conejo
-// 2 imagenes de dentro del <AboutBody/>
 // Estrellas (las tengo en otro componenete
 //---------------------------------------------------
 
