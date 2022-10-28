@@ -6,7 +6,7 @@ import theme from "../../utils/theme";
 const BannerMarquee = (props) => {
   return (
     <StyledBannerMarquee>
-      <Marquee speed={260} delay={props.delay && props.delay}>
+      <Marquee speed={100} delay={props.delay && props.delay} gradient={false}>
         • [-57,70] ©️DECENTRALAND NOV. 10-13 •
         <DateHighlight> -12PM UTC </DateHighlight> • [-57,70] ©️DECENTRALAND
         NOV. 10-13 •<DateHighlight> -12PM UTC </DateHighlight>
@@ -19,22 +19,11 @@ const StyledBannerMarquee = styled.div`
   background: black;
   font-size: 12px;
   position: relative;
-  &:before,
-  &:after {
-    position: absolute;
-    bottom: 0;
-    height: 1px;
-    width: 100%;
-    background: ${theme.accent};
-    box-shadow: 0 0 2px 0.3px ${theme.accent};
-    content: "";
-  }
-  &:before {
-    bottom: 0;
-  }
-  &:after {
-    top: 0;
-  }
+  border-top: ${(props) =>
+    !props.noBorderTop ? `solid 2px ${theme.accent}` : "none"};
+  border-bottom: ${(props) =>
+    !props.noBorderBottom ? `solid 2px ${theme.accent}` : "none"};
+  line-height: 24px;
   .marquee-container {
     padding: 12px 0;
     .overlay {
@@ -46,11 +35,8 @@ const StyledBannerMarquee = styled.div`
     * {
       font-family: "Yapari expanded";
       font-size: 12px;
-      font-weight: 400;
       letter-spacing: 2px;
-
-      margin-top: 4px;
-      margin-bottom: 4px;
+      font-weight: 700;
     }
   }
 `;
