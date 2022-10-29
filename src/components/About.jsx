@@ -1,12 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "./../components/Button";
+//import Button from "./../components/Button";
 // import AboutImage from "./../images/about.png";
-import { breakpoints } from "../../utils/theme";
+//import { breakpoints } from "../../utils/theme";
 import theme from "../../utils/theme";
 import AboutThinIcon from "../images/about-thin-icon.png";
 import EyeTriengleIcon from "../images/eye-triangle-icon.svg";
-
+import AboutButtonDefaultImg from "../images/aboutButton_Default.png";
+import AboutButtonDefaultSvg from "../images/aboutButton_Default.svg";
+import AboutButtonVariantImg from "../images/aboutButton_Variant.png";
+import AboutButtonVariantSvg from "../images/aboutButton_Variant.svg";
+import GearIcon from "./../images/logo.svg";
 // const About = (props) => {
 //   return (
 //     <StyledAbout id="about" className="what-is-metaverse">
@@ -145,7 +149,7 @@ const About = (props) => {
             <br />
             FESTIVAL{" "}
           </AboutTitle>
-          <img src="https://via.placeholder.com/150" />
+          <img src="https://via.placeholder.com/150" alt="Imagen de prueba" />
         </AboutHeader>
         <Aboutbody>
           <AboutBodyImgContainer>
@@ -184,6 +188,11 @@ const About = (props) => {
             </AboutBodyParagraph>
           </AboutBodyText>
         </Aboutbody>
+        <AboutFooter>
+          <AboutButtonContainer>
+            <AboutButtonLink />
+          </AboutButtonContainer>
+        </AboutFooter>
       </StyledAbout>
     </>
   );
@@ -257,6 +266,45 @@ const TextHighlight = styled.span`
   color: ${theme.accent};
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+`;
+
+const AboutFooter = styled.section`
+  padding-top: 75px;
+  width: 1092px;
+  height: 431px;
+`;
+const AboutButtonContainer = styled.div`
+  width: 1092px;
+  height: 348px;
+  /* padding-top: 85px; */
+  margin: 0px;
+`;
+
+const AboutButtonLink = styled.button`
+  padding-bottom: 197px;
+  padding-left: 174px;
+  padding-right: 174px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1092px;
+  height: 150px;
+  max-height: 150px;
+  background-image: url(${AboutButtonDefaultImg});
+  background-color: black;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  &:hover {
+    /* padding-top: 65px; Solucione el problema de la dif de tamano con diferentes paddings */
+    max-height: 150px;
+    background-image: url(${AboutButtonVariantImg});
+    background-color: black;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 `;
 
 // --------------------------------------------------

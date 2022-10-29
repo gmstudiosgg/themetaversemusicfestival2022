@@ -95,9 +95,7 @@ const IndexPage = () => {
           <br />
           <br />
           <About />
-          <br />
-          <br />
-          <br />
+          <hr />
           <Footer />
         </header>
         <main>{showVideo && <Banner setShowVideo={setShowVideo} />}</main>
