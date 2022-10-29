@@ -5,8 +5,10 @@ import AboutThinIcon from "../images/about-thin-icon.png";
 import EyeTriengleIcon from "../images/eye-triangle-icon.svg";
 import AboutButtonDefaultImg from '../images/aboutButton_Default.png';
 import AboutButtonVariantImg from '../images/aboutButton_Variant.png';
+import Logo from '../images/logo-navbar.svg';
 import AboutTitleImg from '../images/about-title.png';
 import { Container } from "./Container";
+import { StaticImage } from "gatsby-plugin-image";
 
 const About = (props) => {
   return (
@@ -56,17 +58,21 @@ const About = (props) => {
         </Aboutbody>
         <AboutFooter>
           <AboutButtonContainer>
-            <AboutButtonLink />
+            <AboutButtonLink>
+              <ButtonDecorator src={Logo}/>
+            </AboutButtonLink>
           </AboutButtonContainer>
         </AboutFooter>
       </StyledAbout>
     </Container>
   );
 };
+
 const StyledAbout = styled.div`xw
   margin: auto 174px;
-  padding: 7rem 0;
+  padding: 96px 0;
 `;
+
 const AboutHeader = styled.section`
   display: flex;
   justify-content: space-between;
@@ -158,6 +164,7 @@ const AboutButtonContainer = styled.div`
 `;
 
 const AboutButtonLink = styled.a`
+  position: relative;
   padding-bottom: 197px;
   padding-left: 174px;
   padding-right: 174px;
@@ -172,17 +179,42 @@ const AboutButtonLink = styled.a`
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 100%;
+  transition: background-image 0.4s ease;
 
   &:hover {
-    /* padding-top: 65px; Solucione el problema de la dif de tamano con diferentes paddings */
     max-height: 150px;
     background-image: url(${AboutButtonVariantImg});
     background-color: black;
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100%; 
+
+    img {
+      -webkit-animation: rotating 10s linear infinite;
+      -moz-animation: rotating 10s linear infinite;
+      -ms-animation: rotating 10s linear infinite;
+      -o-animation: rotating 10s linear infinite;
+      animation: rotating 10s linear infinite;
+    
+      @keyframes rotating {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+      }
+    }
   }
 `;
+
+const ButtonDecorator = styled.img`
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 47px;
+  height: 52px;
+`
 
 // --------------------------------------------------
 // Necesito:

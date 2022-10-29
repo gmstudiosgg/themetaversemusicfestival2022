@@ -82,10 +82,10 @@ const IndexPage = () => {
         <header>
           <Navbar />
           <Hero />
-          <WatchTheTeaser />
-          <About />
-          <Footer />
           <BannerMarquee />
+          <About />
+          <WatchTheTeaser />
+          <Footer />
         </header>
         <main>{showVideo && <Banner setShowVideo={setShowVideo} />}</main>
       </Layout>
