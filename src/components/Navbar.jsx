@@ -5,9 +5,10 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Twitter } from "../components/icons/Vector-Twitter.js";
 import { Discord } from "../components/icons/Vector-Discord.js";
 import { OpenSea } from "../components/icons/Vector-openSea.js";
+import { border } from "../images/navbar-border.png";
 
 const Navbar = (props) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const Links = [
     {
       label: "ABOUT",
@@ -38,12 +39,12 @@ const Navbar = (props) => {
     }
   };
   return (
-    <>
+    <Header>
       <StyledNavbar className="navbar">
         <Nav>
-          <div>
-            <StaticImage src={"./../images/logo.svg"} height={140} />
-          </div>
+          <LogoContainer>
+            <StaticImage src={"./../images/logo-navbar.svg"} height={140} />
+          </LogoContainer>
 
           <div>
             <MenuList>
@@ -120,21 +121,26 @@ const Navbar = (props) => {
           </ul>
         </div>
       </StyledNavbar>
-    </>
+      <StyledBorder src={border} />
+    </Header>
   );
 };
 
-const StyledNavbar = styled.section`
-  width: 100%;
-  z-index: 100;
+const Header = styled.header`
   position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   background-color: black;
+  z-index: 100;
+`
 
-  /* Agregado fede */
-  border-bottom: solid 5px ${theme.accent};
+const StyledNavbar = styled.section`
+  position: relative;
+  
+  border-bottom: solid 5px ${theme.white};
   display: flex;
   justify-content: space-between;
-  /* ---------------- */
 
   @media screen and (max-width: ${breakpoints.md}) {
     bottom: 0;
@@ -218,6 +224,23 @@ const Nav = styled.nav`
   padding: 18px 62px;
 `;
 
+const LogoContainer = styled.div`
+  -webkit-animation: rotating 10s linear infinite;
+  -moz-animation: rotating 10s linear infinite;
+  -ms-animation: rotating 10s linear infinite;
+  -o-animation: rotating 10s linear infinite;
+  animation: rotating 10s linear infinite;
+
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+`
+
 const MenuItem = styled.li`
   font-family: "Yapari";
   font-size: 16px;
@@ -238,5 +261,15 @@ const MenuList = styled.ul`
   display: flex;
   justify-content: space-between;
 `;
+
+const StyledBorder = styled.div`
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+  background-image: url('/navbar-border.png');
+`
 
 export default Navbar;
