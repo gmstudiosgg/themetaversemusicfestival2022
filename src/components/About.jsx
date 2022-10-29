@@ -69,7 +69,7 @@ const About = (props) => {
 };
 
 const StyledAbout = styled.div`
-  margin: auto 174px;
+  margin: auto;
   padding: 96px 0;
 `;
 
