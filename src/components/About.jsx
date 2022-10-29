@@ -3,9 +3,9 @@ import styled from "styled-components";
 import theme, { breakpoints } from "../../utils/theme";
 import AboutThinIcon from "../images/about-thin-icon.png";
 import EyeTriengleIcon from "../images/eye-triangle-icon.svg";
-import AboutButtonDefaultImg from '../images/aboutButton_Default.png';
-import AboutButtonVariantImg from '../images/aboutButton_Variant.png';
-import AboutTitleImg from '../images/about-title.png';
+import AboutButtonDefaultImg from "../images/aboutButton_Default.png";
+import AboutButtonVariantImg from "../images/aboutButton_Variant.png";
+import AboutTitleImg from "../images/about-title.png";
 import { Container } from "./Container";
 
 const About = (props) => {
@@ -63,7 +63,7 @@ const About = (props) => {
     </Container>
   );
 };
-const StyledAbout = styled.div`xw
+const StyledAbout = styled.div`
   margin: auto 174px;
   padding: 7rem 0;
 `;
