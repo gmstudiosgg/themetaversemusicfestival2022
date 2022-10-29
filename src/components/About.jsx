@@ -1,22 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import theme from "../../utils/theme";
+import theme, { breakpoints } from "../../utils/theme";
 import AboutThinIcon from "../images/about-thin-icon.png";
 import EyeTriengleIcon from "../images/eye-triangle-icon.svg";
+import AboutButtonDefaultImg from '../images/aboutButton_Default.png';
+import AboutButtonVariantImg from '../images/aboutButton_Variant.png';
+import AboutTitleImg from '../images/about-title.png';
+import { Container } from "./Container";
 
 const About = (props) => {
   return (
-    <>
+    <Container>
       <StyledAbout>
         <AboutHeader>
           {" "}
-          <AboutTitle>
-            WELCOME <br /> TO THE <br />
-            <TitleTextHighlight>METAVERSE</TitleTextHighlight>
-            <br />
-            FESTIVAL{" "}
-          </AboutTitle>
-          <img src="https://via.placeholder.com/150" />
+          <img src={AboutTitleImg} />
+          <img src="https://via.placeholder.com/150" alt="Imagen de prueba" />
         </AboutHeader>
         <Aboutbody>
           <AboutBodyImgContainer>
@@ -55,11 +54,16 @@ const About = (props) => {
             </AboutBodyParagraph>
           </AboutBodyText>
         </Aboutbody>
+        <AboutFooter>
+          <AboutButtonContainer>
+            <AboutButtonLink />
+          </AboutButtonContainer>
+        </AboutFooter>
       </StyledAbout>
-    </>
+    </Container>
   );
 };
-const StyledAbout = styled.div`
+const StyledAbout = styled.div`xw
   margin: auto 174px;
   padding: 7rem 0;
 `;
@@ -69,11 +73,21 @@ const AboutHeader = styled.section`
   margin-bottom: 56px;
 `;
 
-const AboutTitle = styled.h2`
-  font-family: "Yapari";
-  font-weight: 300;
-  font-size: 58px;
-  letter-spacing: 0.2em;
+const AboutTitle = styled.img`
+  width: 100%;
+  height: auto;
+  @media screen and (min-width: ${breakpoints.md}) {
+    width: 90%;
+  }
+  @media screen and (min-width: ${breakpoints.l}) {
+    width: 90%;
+  }
+  @media screen and (min-width: ${breakpoints.xl}) {
+    width: 90%;
+  }
+  @media screen and (min-width: ${breakpoints.xxl}) {
+    width: 0%;
+  }
 `;
 
 const Aboutbody = styled.section`
@@ -129,6 +143,45 @@ const TextHighlight = styled.span`
   color: ${theme.accent};
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+`;
+
+const AboutFooter = styled.section`
+  padding-top: 75px;
+  width: 1092px;
+  height: 431px;
+`;
+const AboutButtonContainer = styled.div`
+  width: 1092px;
+  height: 348px;
+  /* padding-top: 85px; */
+  margin: 0px;
+`;
+
+const AboutButtonLink = styled.a`
+  padding-bottom: 197px;
+  padding-left: 174px;
+  padding-right: 174px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1092px;
+  height: 150px;
+  max-height: 150px;
+  background-image: url(${AboutButtonDefaultImg});
+  background-color: black;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  &:hover {
+    /* padding-top: 65px; Solucione el problema de la dif de tamano con diferentes paddings */
+    max-height: 150px;
+    background-image: url(${AboutButtonVariantImg});
+    background-color: black;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 `;
 
 // --------------------------------------------------
