@@ -7,7 +7,7 @@ import { Discord } from "../components/icons/Vector-Discord.js";
 import { OpenSea } from "../components/icons/Vector-openSea.js";
 
 const Navbar = (props) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const Links = [
     {
       label: "ABOUT",
@@ -131,7 +131,7 @@ const StyledNavbar = styled.section`
   background-color: black;
 
   /* Agregado fede */
-  border-bottom: solid 5px ${theme.accent};
+  border-bottom: solid 5px ${theme.white};
   display: flex;
   justify-content: space-between;
   /* ---------------- */
