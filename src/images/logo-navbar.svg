@@ -1,18 +1,15 @@
-<svg width="54" height="55" viewBox="0 0 54 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M27 14.279L38.9837 21.1316V34.8998L27 41.7525L15.0163 34.8998V21.1159L27 14.279ZM27 12L13 20V36L27 44L41 36V20L27 12Z" fill="#DBDBDB"/>
-<g filter="url(#filter0_d_321_2384)">
-<path d="M31.4472 24.7948C30.065 24.7948 28.9431 23.6789 28.9431 22.3115C28.9431 21.9186 29.0407 21.5413 29.2033 21.2113C28.4878 20.9598 27.7236 20.8184 26.9268 20.8184C23.1057 20.8184 20 23.8832 20 27.671C20 31.4588 23.1057 34.5237 26.9268 34.5237C30.748 34.5237 33.8537 31.4588 33.8537 27.671C33.8537 26.4451 33.5285 25.2977 32.9594 24.2918C32.5366 24.5905 32.0325 24.7791 31.4634 24.7791L31.4472 24.7948ZM26.9106 31.3488C24.878 31.3488 23.2195 29.7142 23.2195 27.6867C23.2195 25.6592 24.878 24.0246 26.9106 24.0246C28.9431 24.0246 30.6016 25.6592 30.6016 27.6867C30.6016 29.7142 28.9431 31.3488 26.9106 31.3488Z" fill="#DBDBDB"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 28 32" style="enable-background:new 0 0 28 32;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#DBDBDB;}
+</style>
+<polygon points="14,2.3 2,9.1 2,22.9 14,29.8 26,22.9 26,9.1 "/>
+<path class="st0" d="M14,2.3l12,6.9v13.8l-12,6.9L2,22.9V9.1L14,2.3z M14,0L0,8v16l14,8l14-8V8L14,0z"/>
+<g>
+	<path class="st0" d="M18.4,12.8c-1.4,0-2.5-1.1-2.5-2.5c0-0.4,0.1-0.8,0.3-1.1c-0.7-0.3-1.5-0.4-2.3-0.4c-3.8,0-6.9,3.1-6.9,6.9
+		s3.1,6.9,6.9,6.9c3.8,0,6.9-3.1,6.9-6.9c0-1.2-0.3-2.4-0.9-3.4C19.5,12.6,19,12.8,18.4,12.8L18.4,12.8z M13.9,19.3
+		c-2,0-3.7-1.6-3.7-3.7s1.7-3.7,3.7-3.7c2,0,3.7,1.6,3.7,3.7S15.9,19.3,13.9,19.3z"/>
 </g>
-<defs>
-<filter id="filter0_d_321_2384" x="0" y="0.818359" width="53.8537" height="53.7051" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset/>
-<feGaussianBlur stdDeviation="10"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.8275 0 0 0 0 0.8125 0 0 0 0 1 0 0 0 0.7 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_321_2384"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_321_2384" result="shape"/>
-</filter>
-</defs>
 </svg>

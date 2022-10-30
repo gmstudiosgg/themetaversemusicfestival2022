@@ -79,8 +79,12 @@ const StyledHero = styled.div`
   justify-content: center;
   width: 100%;
 `;
+
 export const LogoContainer = styled.div`
+margin-bottom: 24px;
+@media screen and (min-width: ${breakpoints.md}) {
   padding: 0 33px;
+}
 `;
 
 const StyledImage = styled.img`
@@ -90,9 +94,13 @@ const StyledImage = styled.img`
 
 const EventDetails = styled.div`
   position: relative;
-  padding: 0 121px;
+  padding: 0 24px;
   border-left: 3px solid white;
   border-right: 3px solid white;
+
+  @media screen and (min-width: ${breakpoints.md}) {
+    padding: 0 121px;
+  }
 `;
 
 const EventData = styled.div`
@@ -108,10 +116,12 @@ const EventData = styled.div`
 const EventDataBottom = styled.div`
   display: flex;
   align-items: center;
+  margin-top: 16px;
   justify-content: space-between;
-  margin-top: 32px;
-  @media screen and (max-width: ${breakpoints.md}) {
-    flex-direction: column;
+  flex-direction: column;
+  @media screen and (min-width: ${breakpoints.md}) {
+    margin-top: 32px;
+    flex-direction: row;
   }
 `;
 
@@ -127,20 +137,20 @@ const EventDataItem = styled.div`
 `;
 
 const DateComponent = styled.section`
-  font-size: 26px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 88%;
   font-family: "Yapari Expanded";
   padding-left: 0;
   width: 100%;
   text-align: center;
-  letter-spacing: 14px;
-
+  
   @media screen and (min-width: ${breakpoints.md}) {
     font-size: 18px;
     text-align: center;
+    letter-spacing: 14px;
   }
-
+  
   @media screen and (min-width: ${breakpoints.l}) {
     font-size: 26px;
     line-height: 88%;
@@ -154,16 +164,22 @@ const DateHighlight = styled.span`
 
 const DateLocation = styled.span`
   font-family: "Yapari";
-  font-size: 36px;
+  font-size: 13px;
+  line-height: 32px;
   font-weight: 600;
-  line-height: 72px;
-  letter-spacing: 7px;
+  letter-spacing: 2px;
+  
+  @media screen and (min-width: ${breakpoints.md}) {
+    font-size: 36px;
+    line-height: 72px;
+    letter-spacing: 7px;
+  }
 `;
 
 const StyledLogo = styled.img`
-  max-width: 70%;
-
-  @media screen and (max-width: ${breakpoints.md}) {
+  display: none;
+  @media screen and (min-width: ${breakpoints.md}) {
+    display: block;
     max-width: 50%;
     margin: 0 auto;
     text-align: center;
@@ -176,6 +192,7 @@ const SaveTheDate = styled(Button)`
 `;
 
 const Decorator = styled.img`
+  display: none;
   position: absolute;
   transform: translateY(-50%);
   width: ${(props) => `${props.width}`};
@@ -184,17 +201,27 @@ const Decorator = styled.img`
   top: ${(props) => `${props.top}` || null};
   bottom: ${(props) => `${props.bottom}` || null};
   right: ${(props) => `${props.right}` || null};
+  @media screen and (min-width: ${breakpoints.md}) {
+    
+  }
 `;
 
 const WhiteRabbit = styled.img`
-  width: 52px;
-  height: 30px;
+  width: 42px;
+  height: 20px;
   box-sizing: border-box;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-right: 16px;
-  margin-right: 16px;
+  padding-right: 8px;
+  margin-right: 8px;
   border-right: 4px solid ${theme.accent};
+
+  @media screen and (min-width: ${breakpoints.md}) {
+    width: 52px;
+    height: 30px;
+    padding-right: 16px;
+    margin-right: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
 `;
 
 const Polygon = styled.img`

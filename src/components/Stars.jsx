@@ -7,13 +7,13 @@ import { Vector3 } from 'three'
 
 const Wrapper = () => {
     useFrame(({ camera }) => {
-        const positionZ = window.scrollY / 10 + 400
+        const positionZ = (window.scrollY / 10)
 
-        camera.position.lerp(new Vector3(camera.position.x, camera.position.y, positionZ))
+        camera.position.lerp(new Vector3(camera.position.x, camera.position.y, positionZ), 0.3)
     })
     return (
         <Float>
-            <Stars radius={250} count={200} saturation={1} factor={4} speed={.05} />
+            <Stars radius={250} count={1200} saturation={1} factor={4} speed={.05} fade />
         </Float>
     )
 }

@@ -85,41 +85,6 @@ const Navbar = (props) => {
             </SocialIcon>
           </div>
         </Nav>
-        <div
-          className="mobile-toggle"
-          onClick={() => {
-            setIsMobileMenuOpen(!isMobileMenuOpen);
-          }}
-        >
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div className={`mobile-navbar ${isMobileMenuOpen ? "open" : ""}`}>
-          <StaticImage
-            onClick={() => {
-              setIsMobileMenuOpen(!isMobileMenuOpen);
-            }}
-            className="close-menu-icon"
-            src={"./../images/close_menu_icon.png"}
-            alt="close"
-            title="close"
-          />
-          <ul>
-            {Links.map((link, i) => (
-              <li key={i}>
-                <a
-                  onClick={() => {
-                    scrollTo(link.targetId);
-                    setIsMobileMenuOpen(!isMobileMenuOpen);
-                  }}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
       </StyledNavbar>
       <StyledBorder src={border} />
     </Header>
@@ -137,65 +102,9 @@ const Header = styled.header`
 
 const StyledNavbar = styled.section`
   position: relative;
-  
   border-bottom: solid 5px ${theme.white};
   display: flex;
   justify-content: space-between;
-
-  @media screen and (max-width: ${breakpoints.md}) {
-    bottom: 0;
-    height: 52px;
-    background: #eefe56;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  &:before {
-    position: absolute;
-    bottom: 0;
-    height: 1px;
-    width: 100%;
-    content: "";
-    @media screen and (max-width: ${breakpoints.md}) {
-      display: none;
-    }
-  }
-  .mobile-toggle {
-    display: none;
-    width: 80px;
-    @media screen and (max-width: ${breakpoints.md}) {
-      display: unset;
-    }
-    div {
-      width: 80px;
-      height: 1px;
-      background: black;
-      margin-bottom: 10px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-  .mobile-navbar {
-    width: 100vw;
-    height: 100vh;
-    bottom: -100vh;
-    position: absolute;
-    background: #eefe56;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.5s ease-in-out all;
-    padding: 24px;
-    .close-menu-icon {
-      width: 50px;
-      margin-bottom: 30px;
-    }
-    &.open {
-      bottom: 0;
-      opacity: 1;
-      pointer-events: unset;
-    }
-  }
 `;
 
 const SocialIcon = styled.a`
@@ -221,7 +130,10 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 62px;
+  padding: 24px 24px;
+  @media screen and (min-width: ${breakpoints.md}) {
+    padding: 18px 62px;
+  }
 `;
 
 const LogoContainer = styled.div`
@@ -258,8 +170,11 @@ const MenuItem = styled.li`
 `;
 
 const MenuList = styled.ul`
-  display: flex;
+  display: none;
   justify-content: space-between;
+  @media screen and (min-width: ${breakpoints.md}) {
+    display: flex;
+  }
 `;
 
 const StyledBorder = styled.div`

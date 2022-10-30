@@ -6,7 +6,7 @@ import volume from '../images/volume.svg'
 import { breakpoints } from "../../utils/theme";
 
 const Banner = ({ setShowVideo }) => {
-    const [muted, setMuted] = useState(true)
+    const [muted, setMuted] = useState(false)
 
     return (
         <section id="2022-banner">
@@ -37,9 +37,8 @@ const Banner = ({ setShowVideo }) => {
                         playsinline
                     />
                 </DesktopVideo>
-                <SoundButton src={muted ? volumeMuted : volume} onClick={() => setMuted(false)} />
                 <SkipVideo onClick={() => setShowVideo(false)}>
-                    SKIP
+                    X
                 </SkipVideo>
             </StyledBanner>
         </section>
@@ -47,6 +46,7 @@ const Banner = ({ setShowVideo }) => {
 };
 
 const StyledBanner = styled.div`
+    z-index: 666;
     position: fixed;
     left: 0;
     top: 0;
@@ -83,6 +83,8 @@ const SkipVideo = styled.a`
     top: 40px;
     right: 40px;
     letter-spacing: 2px;
+    cursor: pointer;
+    padding: 8px;
 `
 
 const SoundButton = styled.img`

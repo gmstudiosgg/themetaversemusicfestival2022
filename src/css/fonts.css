@@ -20,6 +20,13 @@
 }
 
 @font-face {
+  font-family: "Yapari Wide";
+  font-style: normal;
+  font-weight: 500;
+  src: url(./../fonts/Yapari-BoldWide.ttf);
+}
+
+@font-face {
   font-family: "Yapari Expanded";
   font-style: normal;
   font-weight: 500;

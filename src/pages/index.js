@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import BannerMarquee from "../components/Marquee";
 import WatchTheTeaser from "../components/WatchTheTeaser";
+import About from "../components/About";
 
 const seo = {
   title: "Metaverse Music Festival | Decentraland",
@@ -70,15 +71,20 @@ const IndexPage = () => {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+          rel="stylesheet"
+        ></link>
       </Helmet>
       <Layout>
         <header>
           <Navbar />
           <Hero />
           <BannerMarquee />
-          <br />
-          <WatchTheTeaser />
-
+          <About />
+          <WatchTheTeaser setShowVideo={setShowVideo} />
           <Footer />
         </header>
         <main>{showVideo && <Banner setShowVideo={setShowVideo} />}</main>

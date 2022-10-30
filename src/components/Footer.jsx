@@ -42,11 +42,6 @@ const Footer = (props) => {
   ];
   return (
     <StyledFooter>
-      {/* <div className="primary-links">
-            <a href="MusicFestivalGeneralInfo.pdf" download>Legal Information</a>
-            <a href="MusicFestivalGeneralInfo.pdf" download>Press Kit</a>
-
-        </div> */}
       <StyledLogoContainer>
         <a href="https://play.decentraland.org/" target="_blank">
           <StyledLogo alt={"Decentraland Logo"} src={dclLogo} />
@@ -82,9 +77,15 @@ const Footer = (props) => {
 const StyledFooter = styled.footer`
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  padding: 48px 62px 40px;
+  align-items: center;
+  padding: 48px 24px;
   background-color: ${theme.black};
+  @media screen and (min-width: ${breakpoints.l}) {
+    padding: 48px 62px 40px;
+    flex-direction: row;
+  }
 `;
 
 const StyledLogoContainer = styled.div`
@@ -94,7 +95,11 @@ const StyledLogoContainer = styled.div`
 
 const StyledLogo = styled.img`
   height: 35px;
-  margin-right: 78px;
+  margin-bottom: 32px;
+  @media screen and (min-width: ${breakpoints.l}) {
+    margin-bottom: unset;
+    margin-right: 78px;
+  }
 `;
 
 const StyledSocialLinksContainer = styled.div`
@@ -112,17 +117,29 @@ const StyledLinksList = styled.ul`
   display: flex;
   align-items: center;
   vertical-align: center;
+  flex-direction: column;
+  @media screen and (min-width: ${breakpoints.l}) {
+    flex-direction: row;
+  }
 `;
 
 const PageLink = styled.li`
-  max-width: 160px;
-  margin-right: 67px;
+  text-align: center;
   line-height: 22px;
+  margin: 16px 0;
+
   a {
     transition: all 0.4s ease;
   }
   a:hover {
     color: ${theme.accent};
+  }
+  
+  @media screen and (min-width:${breakpoints.l}) {
+    margin: unset;
+    max-width: 160px;
+    margin-right: 67px;
+    text-align: left;
   }
 `;
 
@@ -131,23 +148,33 @@ const StyledSocialLinks = styled.ul`
   vertical-align: center;
   align-items: center;
   justify-content: flex-end;
+  margin-top: 32px;
 
   a svg {
     width: 25px;
     height: 25px;
   }
+
+  @media screen and (min-width: )
 `;
 
 const StyledSocialLink = styled.li`
+margin-left: 20px;
+margin-right: 20px;
+
+svg path {
+  transition: all 0.4s ease;
+}
+svg:hover {
+  path {
+    fill: ${theme.accent};
+  }
+}
+
+@media screen and (min-width: ${breakpoints.md}) {
+  margin-right: unset;
   margin-left: 40px;
-  svg path {
-    transition: all 0.4s ease;
-  }
-  svg:hover {
-    path {
-      fill: ${theme.accent};
-    }
-  }
+}
 `;
 
 export default Footer;
