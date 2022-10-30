@@ -204,8 +204,9 @@ const AboutButtonLink = styled.button`
   padding: 16px 32px;
   border: 4px solid ${theme.white};
   border-radius: 120px;
-  transition: background-image color 0.4s ease;
+  transition: all 0.4s ease;
   backdrop-filter: blur(2px);
+
   img {
     -webkit-animation: rotating 10s linear infinite;
     -moz-animation: rotating 10s linear infinite;
@@ -216,6 +217,10 @@ const AboutButtonLink = styled.button`
 
   &:hover {
     color: black;
+    box-shadow:
+          0 0 20px #fff,
+          0 0 10px violet,
+          0 0 5px blue;
 
     img {
       -webkit-animation: rotating 10s linear infinite;
