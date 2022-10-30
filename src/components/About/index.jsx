@@ -1,14 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import theme, { breakpoints } from "../../utils/theme";
-import AboutThinIcon from "../images/about-thin-icon.png";
-import EyeTriengleIcon from "../images/eye-triangle-icon.svg";
-import AboutButtonDefaultImg from "../images/aboutButton_Default.png";
-import AboutButtonVariantImg from "../images/aboutButton_Variant.png";
-import Logo from '../images/logo-navbar.svg';
-import AboutTitleImg from "../images/about-title.png";
-import { Container } from "./Container";
-import { StaticImage } from "gatsby-plugin-image";
+import theme, { breakpoints } from "../../../utils/theme";
+import AboutThinIcon from "../../images/about-thin-icon.png";
+import Logo from "../../images/logo-navbar.svg";
+import AboutMobileThinIcon from "../../images/about-mobile-thin-icon.png";
+import EyeTriengleIcon from "../../images/eye-triangle-icon.svg";
+import AboutTitleImg from "../../images/about-title.png";
+import Rabbit from "../../images/rabbit.gif";
+import { Container } from "../Container";
 
 const About = (props) => {
   return (
@@ -16,14 +15,15 @@ const About = (props) => {
       <StyledAbout>
         <AboutHeader>
           {" "}
-          <img src={AboutTitleImg} />
-          <img src="https://via.placeholder.com/150" alt="Imagen de prueba" />
+          <AboutTitle src={AboutTitleImg} />
+          <RabbitAnimation src={Rabbit} alt="Follow the white rabbit" width={200} />
         </AboutHeader>
         <Aboutbody>
           <AboutBodyImgContainer>
             <AboutBodyImg>
-              <AboutBodyIcon src={AboutThinIcon} width="18px" height="371px" />
-              <AboutBodyIcon src={EyeTriengleIcon} width="76px" height="76px" />
+              <AboutBodyCodebar src={AboutThinIcon} />
+              <AboutMobileBodyCodebar src={AboutMobileThinIcon} />
+              <AboutBodyIlluminati src={EyeTriengleIcon} width="76px" height="76px" />
             </AboutBodyImg>
           </AboutBodyImgContainer>
           <AboutBodyText>
@@ -59,7 +59,8 @@ const About = (props) => {
         <AboutFooter>
           <AboutButtonContainer>
             <AboutButtonLink>
-              <ButtonDecorator src={Logo}/>
+              WE CAN'T WAIT TO SEE YOU IN THE METAVERSE!
+              <ButtonDecorator src={Logo} />
             </AboutButtonLink>
           </AboutButtonContainer>
         </AboutFooter>
@@ -86,31 +87,66 @@ const AboutTitle = styled.img`
     width: 90%;
   }
   @media screen and (min-width: ${breakpoints.l}) {
-    width: 90%;
+    width: 80%;
   }
   @media screen and (min-width: ${breakpoints.xl}) {
-    width: 90%;
+    width: 70%;
   }
   @media screen and (min-width: ${breakpoints.xxl}) {
-    width: 0%;
+    width: 60%;
   }
 `;
+
+const RabbitAnimation = styled.img`
+  display: none;
+
+  @media screen and (min-width: ${breakpoints.md}) {
+    display: block;
+  }
+`
 
 const Aboutbody = styled.section`
   display: flex;
   justify-content: space-between;
 `;
 
-const AboutBodyIcon = styled.img``;
+const AboutBodyCodebar = styled.img`
+  display: none;
+  height: 100%;
+  padding-bottom: 38px;
+  @media screen and (min-width: ${breakpoints.md}) {
+    display: block;
+  }
+`;
+
+const AboutMobileBodyCodebar = styled.img`
+  height: 62vh;
+  display: block;
+
+  @media screen and (min-width: ${breakpoints.md}) {
+    display: none;
+  }
+`;
+
+const AboutBodyIlluminati = styled.img`
+  display: none;
+  @media screen and (min-width: ${breakpoints.md}) {
+    display: block;
+    padding
+  }
+`;
 
 const AboutBodyText = styled.div`
   font-family: "Roboto", sans-serif;
-  width: 60%;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 400;
+  font-size: 15px;
+  line-height: 22.5px;
   letter-spacing: 0.1em;
-  padding-right: 64px;
+  @media screen and (min-width: ${breakpoints.md}) {
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: 400;
+      padding-right: 64px;
+  }
 `;
 
 const AboutBodyParagraph = styled.p`
@@ -122,27 +158,22 @@ const AboutBodyImgContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 40%;
 `;
 
 const AboutBodyImg = styled.div`
-  width: 70px;
-  height: 479px;
-  justify-content: space-between;
-  padding: 5px 0;
-  margin-left: 8px;
-
-  display: flex;
+  display: flex; 
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-`;
-
-const TitleTextHighlight = styled.span`
-  font-family: "Yapari Wide";
-  color: ${theme.accent};
-  font-size: 58px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
+  width: auto;
+  height: 100%;
+  padding-right: 40px;
+  @media screen and (min-width: ${breakpoints.md}) {
+    padding: 5px 0;
+    width: 70px;
+    height: 479px;
+    margin-left: 8px;
+  }
 `;
 
 const TextHighlight = styled.span`
@@ -152,42 +183,39 @@ const TextHighlight = styled.span`
 `;
 
 const AboutFooter = styled.section`
-  padding-top: 75px;
-  width: 1092px;
-  height: 431px;
-`;
-const AboutButtonContainer = styled.div`
-  width: 1092px;
-  height: 348px;
-  /* padding-top: 85px; */
-  margin: 0px;
 `;
 
-const AboutButtonLink = styled.a`
+const AboutButtonContainer = styled.div`
+  margin-top: 32px;
+  @media screen and (min-width: ${breakpoints.md}) {
+    margin-top: 72px;
+  }
+`;
+
+const AboutButtonLink = styled.button`
+  unset: all;
   position: relative;
-  padding-bottom: 197px;
-  padding-left: 174px;
-  padding-right: 174px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1092px;
-  height: 150px;
-  max-height: 150px;
-  background-image: url(${AboutButtonDefaultImg});
-  background-color: black;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  transition: background-image 0.4s ease;
+  width: 100%;
+  height: auto;
+  background: transparent;
+  font-size: 12px;
+  letter-spacing: 120%;
+  font-family: "Yapari Expanded";
+  padding: 16px 32px;
+  border: 4px solid ${theme.white};
+  border-radius: 120px;
+  transition: background-image color 0.4s ease;
+  backdrop-filter: blur(2px);
+  img {
+    -webkit-animation: rotating 10s linear infinite;
+    -moz-animation: rotating 10s linear infinite;
+    -ms-animation: rotating 10s linear infinite;
+    -o-animation: rotating 10s linear infinite;
+    animation: rotating 10s linear infinite;
+  }
 
   &:hover {
-    max-height: 150px;
-    background-image: url(${AboutButtonVariantImg});
-    background-color: black;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: 100%; 
+    color: black;
 
     img {
       -webkit-animation: rotating 10s linear infinite;
@@ -206,23 +234,38 @@ const AboutButtonLink = styled.a`
       }
     }
   }
+
+  @media screen and (min-width: ${breakpoints.md}) {
+    font-size: 22px;
+    padding: 32px 72px;
+
+    img {
+      -webkit-animation: unset;
+      -moz-animation: unset;
+      -ms-animation: unset;
+      -o-animation: unset;
+      animation: unset;
+    }
+  }
+
+  @media screen and (min-width: ${breakpoints.l}) {
+    font-size: 26px;
+    padding: 48px 120px;
+  }
 `;
 
 const ButtonDecorator = styled.img`
   position: absolute;
   top: 0;
   right: 0;
-  width: 47px;
-  height: 52px;
+  width: 24px;
+  height: 27px;
+  @media screen and (min-width: ${breakpoints.md}) {
+    width: 47px;
+    height: 52px;
+    top: 0;
+    right: -5px;
+}
 `
-
-// --------------------------------------------------
-// Necesito:
-//
-
-// assets:
-// .gif del conejo
-// Estrellas (las tengo en otro componenete
-//---------------------------------------------------
 
 export default About;

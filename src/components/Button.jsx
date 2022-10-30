@@ -27,7 +27,7 @@ const StyledButton = styled.a`
   font-weight: 600;
   letter-spacing: 0.165rem;
   text-transform: uppercase;
-  min-width: 350px;
+  width: 100%;
   cursor: pointer;
   transition: 0.1s ease-in-out all;
   white-space: nowrap;
@@ -40,6 +40,9 @@ const StyledButton = styled.a`
       line-height: 48px;
       padding: 0 18px;
   };
+  @media screen and (min-width: ${breakpoints.md}) {
+    min-width: 350px;
+};
   :hover {
     color: ${theme.accent};
   };
