@@ -11,63 +11,69 @@ import { Container } from "../Container";
 
 const About = (props) => {
   return (
-    <Container>
-      <StyledAbout>
-        <AboutHeader>
-          {" "}
-          <AboutTitle src={AboutTitleImg} />
-          <RabbitAnimation src={Rabbit} alt="Follow the white rabbit" width={200} />
-        </AboutHeader>
-        <Aboutbody>
-          <AboutBodyImgContainer>
-            <AboutBodyImg>
-              <AboutBodyCodebar src={AboutThinIcon} />
-              <AboutMobileBodyCodebar src={AboutMobileThinIcon} />
-              <AboutBodyIlluminati src={EyeTriengleIcon} width="76px" height="76px" />
-            </AboutBodyImg>
-          </AboutBodyImgContainer>
-          <AboutBodyText>
-            <AboutBodyParagraph>
-              A four-day celebration of music,{" "}
-              <TextHighlight>
-                culture and creativity in the virtual social world
-              </TextHighlight>{" "}
-              of Decentraland, the Metaverse Festival is a grand collision of
-              light, sound and portable toilets.
-            </AboutBodyParagraph>
-            <br />
-            <AboutBodyParagraph>
-              It’s the first event of its kind – a fully decentralized
-              celebration of music that offers a weird and wonderful brew of
-              world-class headline acts, mind blowing stages, games, exclusive
-              artist merch, collectibles and more.
-            </AboutBodyParagraph>
-            <br />
-            <AboutBodyParagraph>
-              So, on <TextHighlight>October 21</TextHighlight> , dress your
-              avatar in your very best wearables and jump into an experience
-              like no other.
-            </AboutBodyParagraph>
-            <br />
-            <AboutBodyParagraph>
-              And if this is your first time in the virtual world, be sure to
-              take a look at our Festival FAQs, which explain how you can be a
-              part of the fun.
-            </AboutBodyParagraph>
-          </AboutBodyText>
-        </Aboutbody>
-        <AboutFooter>
-          <AboutButtonContainer>
-            <AboutButtonLink>
-              WE CAN'T WAIT TO SEE YOU IN THE METAVERSE!
-              <ButtonDecorator src={Logo} />
-            </AboutButtonLink>
-          </AboutButtonContainer>
-        </AboutFooter>
-      </StyledAbout>
-    </Container>
+    <Section id="about">
+      <Container>
+        <StyledAbout>
+          <AboutHeader>
+            {" "}
+            <AboutTitle src={AboutTitleImg} />
+            <RabbitAnimation src={Rabbit} alt="Follow the white rabbit" width={200} />
+          </AboutHeader>
+          <Aboutbody>
+            <AboutBodyImgContainer>
+              <AboutBodyImg>
+                <AboutBodyCodebar src={AboutThinIcon} />
+                <AboutMobileBodyCodebar src={AboutMobileThinIcon} />
+                <AboutBodyIlluminati src={EyeTriengleIcon} width="76px" height="76px" />
+              </AboutBodyImg>
+            </AboutBodyImgContainer>
+            <AboutBodyText>
+              <AboutBodyParagraph>
+                A four-day celebration of music,{" "}
+                <TextHighlight>
+                  culture and creativity in the virtual social world
+                </TextHighlight>{" "}
+                of Decentraland, the Metaverse Festival is a grand collision of
+                light, sound and portable toilets.
+              </AboutBodyParagraph>
+              <br />
+              <AboutBodyParagraph>
+                It’s the first event of its kind – a fully decentralized
+                celebration of music that offers a weird and wonderful brew of
+                world-class headline acts, mind blowing stages, games, exclusive
+                artist merch, collectibles and more.
+              </AboutBodyParagraph>
+              <br />
+              <AboutBodyParagraph>
+                So, on <TextHighlight>October 21</TextHighlight> , dress your
+                avatar in your very best wearables and jump into an experience
+                like no other.
+              </AboutBodyParagraph>
+              <br />
+              <AboutBodyParagraph>
+                And if this is your first time in the virtual world, be sure to
+                take a look at our Festival FAQs, which explain how you can be a
+                part of the fun.
+              </AboutBodyParagraph>
+            </AboutBodyText>
+          </Aboutbody>
+          <AboutFooter>
+            <AboutButtonContainer>
+              <AboutButtonLink>
+                WE CAN'T WAIT TO SEE YOU IN THE METAVERSE!
+                <ButtonDecorator src={Logo} />
+              </AboutButtonLink>
+            </AboutButtonContainer>
+          </AboutFooter>
+        </StyledAbout>
+      </Container>
+    </Section>
   );
 };
+
+const Section = styled.section`
+  background: black;
+`;
 
 const StyledAbout = styled.div`
   margin: auto;
@@ -90,10 +96,10 @@ const AboutTitle = styled.img`
     width: 80%;
   }
   @media screen and (min-width: ${breakpoints.xl}) {
-    width: 70%;
+    width: 80%;
   }
   @media screen and (min-width: ${breakpoints.xxl}) {
-    width: 60%;
+    width: 70%;
   }
 `;
 
@@ -206,6 +212,7 @@ const AboutButtonLink = styled.button`
   border-radius: 120px;
   transition: all 0.4s ease;
   backdrop-filter: blur(2px);
+  cursor: crosshair;
 
   img {
     -webkit-animation: rotating 10s linear infinite;

@@ -25,7 +25,7 @@ const Faq = () => {
                         questions.map((item, index) => (
                             <FaqItem>
                                 <Question>
-                                    <p>{item.question}</p>
+                                    <p onClick={() => handleOpenItem(index)}>{item.question}</p>
                                     <Toggle
                                         src={toggle}
                                         open={selectedItem === index}

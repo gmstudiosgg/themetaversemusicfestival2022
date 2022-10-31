@@ -81,7 +81,7 @@ const StyledFooter = styled.footer`
   justify-content: space-between;
   align-items: center;
   padding: 48px 24px;
-  background-color: ${theme.black};
+  backdrop-filter: blur(32px);
   @media screen and (min-width: ${breakpoints.l}) {
     padding: 48px 62px 40px;
     flex-direction: row;

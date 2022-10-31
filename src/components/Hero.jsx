@@ -5,7 +5,7 @@ import theme, { breakpoints } from "../../utils/theme";
 import mvmfLogo from "../images/logo-metaverse.png";
 import dclLogo from "../images/logo-dcl.svg";
 import star from "../images/star.svg";
-import whiteRabbit from "../images/rabbit.svg";
+import whiteRabbit from "../images/rabbit.gif";
 import polygon from "../images/STD-polygon.svg";
 import { Container } from "./Container";
 
@@ -15,7 +15,7 @@ const Hero = () => {
       <Container>
         <LogoContainer>
           <StyledImage
-            placeholder={"none"}
+            placeholder={"blur"}
             backgroundColor={"black"}
             objectFit={"contain"}
             loading={"eager"}
@@ -180,8 +180,7 @@ const StyledLogo = styled.img`
   display: none;
   @media screen and (min-width: ${breakpoints.md}) {
     display: block;
-    max-width: 50%;
-    margin: 0 auto;
+    max-width: 60%;
     text-align: center;
   }
 `;
@@ -202,21 +201,18 @@ const Decorator = styled.img`
   bottom: ${(props) => `${props.bottom}` || null};
   right: ${(props) => `${props.right}` || null};
   @media screen and (min-width: ${breakpoints.md}) {
-    
+    display: block;
   }
 `;
 
 const WhiteRabbit = styled.img`
-  width: 42px;
-  height: 20px;
+  width: 60px;
   box-sizing: border-box;
-  padding-right: 8px;
   margin-right: 8px;
   border-right: 4px solid ${theme.accent};
-
+  
   @media screen and (min-width: ${breakpoints.md}) {
     width: 52px;
-    height: 30px;
     padding-right: 16px;
     margin-right: 16px;
     padding-top: 4px;

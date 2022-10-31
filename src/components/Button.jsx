@@ -28,7 +28,7 @@ const StyledButton = styled.a`
   letter-spacing: 0.165rem;
   text-transform: uppercase;
   width: 100%;
-  cursor: pointer;
+  cursor: crosshair;
   transition: 0.1s ease-in-out all;
   white-space: nowrap;
   background: url(${bgImage});

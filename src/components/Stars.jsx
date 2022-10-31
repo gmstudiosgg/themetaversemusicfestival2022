@@ -7,14 +7,22 @@ import { Vector3 } from 'three'
 
 const Wrapper = () => {
     useFrame(({ camera }) => {
-        const positionZ = (window.scrollY / 20)
+        const positionZ = (window.scrollY / 30)
 
         camera.position.lerp(new Vector3(camera.position.x, camera.position.y, - positionZ), 0.3)
     })
     return (
-        <Float>
-            <Stars radius={250} count={1200} saturation={1} factor={4} speed={.05} fade />
-        </Float>
+        <>
+            <Float>
+                <Stars radius={100} count={50} saturation={.5} factor={1} speed={.05} fade />
+            </Float>
+            <Float>
+                <Stars radius={200} count={100} saturation={1} factor={4} speed={.05} fade />
+            </Float>
+            <Float>
+                <Stars radius={300} count={200} saturation={3} factor={2} speed={1} fade />
+            </Float>
+        </>
     )
 }
 
@@ -29,7 +37,7 @@ const StarsScene = () => {
             >
                 <Wrapper />
                 <CameraShake />
-                <EffectComposer multisampling={4}>
+                <EffectComposer multisampling={8}>
                     <Bloom kernelSize={1} luminanceThreshold={0.2} luminanceSmoothing={0.4} intensity={.5} radius={10} />
                     <Bloom kernelSize={KernelSize.HUGE} luminanceThreshold={0} luminanceSmoothing={.4} intensity={.6} radius={2} />
                 </EffectComposer>

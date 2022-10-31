@@ -25,14 +25,14 @@ const TextHighlight = styled.span`
 
 const WatchTeaser = styled.div`
   display: flex;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(12px);
   justify-content: center;
   line-height: 22px;
   font-family: "Yapari Ultra expanded";
   font-weight: 500;
   letter-spacing: 0.22em;
   padding: 80px 0;
-  cursor: pointer;
+  cursor: crosshair;
   p {
     font-size: 14px;
   }

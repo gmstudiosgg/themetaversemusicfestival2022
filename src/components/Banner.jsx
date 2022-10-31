@@ -83,7 +83,7 @@ const SkipVideo = styled.a`
     top: 40px;
     right: 40px;
     letter-spacing: 2px;
-    cursor: pointer;
+    cursor: crosshair;
     padding: 8px;
 `
 

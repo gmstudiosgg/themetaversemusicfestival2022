@@ -42,7 +42,8 @@ export const Question = styled.div`
     justify-content: space-between;
     
     p {
-        max-width: 690%;
+        max-width: 95%;
+        cursor: crosshair;
     }
 `
 
@@ -59,7 +60,10 @@ export const Answer = styled.p`
 export const Toggle = styled.img`
     display: flex;
     width: 8px;
+    padding: 0 8px;
     height: auto;
     transition: all 0.4s ease;
-    transform: ${props => props.open && "rotate(-180deg)"}
+    box-sizing: content-box;
+    cursor: crosshair;
+    transform: ${props => props.open && "rotate(-180deg)"};
 `
