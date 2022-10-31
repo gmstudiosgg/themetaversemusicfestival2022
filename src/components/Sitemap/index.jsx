@@ -5,7 +5,7 @@ import { Container } from "../Container";
 import { StaticImage } from "gatsby-plugin-image";
 
 const Sitemap = () => (
-    <Section>
+    <Section id="sitemap">
         <Container>
             <Title src={title} />
             <StaticImage

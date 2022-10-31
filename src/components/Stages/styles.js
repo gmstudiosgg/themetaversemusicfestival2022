@@ -100,6 +100,7 @@ export const StageLocation = styled.caption`
     line-height: 16px
     font-weight: 600;
     text-transform: uppercase;
+    color: ${theme.accent};
 `
 
 export const StageHover = styled.div`

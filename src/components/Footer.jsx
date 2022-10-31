@@ -16,10 +16,10 @@ const Footer = (props) => {
       name: "PRIVACY POLICIES",
       url: "#",
     },
-    {
-      name: "PRESS KIT",
-      url: "#",
-    },
+    // {
+    //   name: "PRESS KIT",
+    //   url: "#",
+    // },
   ];
 
   const socialLinks = [
@@ -29,15 +29,15 @@ const Footer = (props) => {
       url: "https://twitter.com/decentraland",
     },
     {
-      name: "Discord",
-      file: Discord,
-      url: "https://discord.com/invite/JV8CbCx",
-    },
-    {
       name: "Open Sea",
       file: OpenSea,
       // cambiar url a correcta
       url: "https://www.reddit.com/r/decentraland/",
+    },
+    {
+      name: "Discord",
+      file: Discord,
+      url: "https://discord.com/invite/JV8CbCx",
     },
   ];
   return (

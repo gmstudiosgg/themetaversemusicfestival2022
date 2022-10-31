@@ -8,6 +8,7 @@ import EyeTriengleIcon from "../../images/eye-triangle-icon.svg";
 import AboutTitleImg from "../../images/about-title.png";
 import Rabbit from "../../images/rabbit.gif";
 import { Container } from "../Container";
+import ThreeDee from '../ThreeDee';
 
 const About = (props) => {
   return (
@@ -60,19 +61,20 @@ const About = (props) => {
           <AboutFooter>
             <AboutButtonContainer>
               <AboutButtonLink>
-                WE CAN'T WAIT TO SEE YOU IN THE METAVERSE!
+                SEE YOU IN THE METAVERSE!
                 <ButtonDecorator src={Logo} />
               </AboutButtonLink>
             </AboutButtonContainer>
           </AboutFooter>
         </StyledAbout>
       </Container>
+      <ThreeDee />
     </Section>
   );
 };
 
 const Section = styled.section`
-  background: black;
+position: relative;
 `;
 
 const StyledAbout = styled.div`

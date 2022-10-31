@@ -5,22 +5,28 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Twitter } from "../components/icons/Vector-Twitter.js";
 import { Discord } from "../components/icons/Vector-Discord.js";
 import { OpenSea } from "../components/icons/Vector-openSea.js";
-import { border } from "../images/navbar-border.png";
+import { Instagram } from "../components/icons/Vector-Instagram.js";
+import border from "../images/navbar-border.png";
 
 const Navbar = (props) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
   const Links = [
     {
       label: "ABOUT",
       targetId: "about",
     },
+    // {
+    //   label: "LINE UP",
+    //   targetId: "lineup",
+    // },
     {
-      label: "LINE UP",
-      targetId: "lineup",
+      label: "SITEMAP",
+      targetId: "sitemap",
     },
     {
-      label: "MAP",
-      targetId: "map",
+      label: "STAGES",
+      targetId: "stages",
     },
     {
       label: "FAQ",
@@ -42,7 +48,7 @@ const Navbar = (props) => {
     <Header>
       <StyledNavbar className="navbar">
         <Nav>
-          <LogoContainer>
+          <LogoContainer href="#">
             <StaticImage src={"./../images/logo-navbar.svg"} height={140} />
           </LogoContainer>
 
@@ -81,7 +87,7 @@ const Navbar = (props) => {
               target="_blank"
               rel="noreferrer"
             >
-              <OpenSea />
+              <Instagram />
             </SocialIcon>
           </div>
         </Nav>
@@ -137,7 +143,7 @@ const Nav = styled.nav`
   }
 `;
 
-const LogoContainer = styled.div`
+const LogoContainer = styled.a`
   cursor: crosshair;
   -webkit-animation: rotating 10s linear infinite;
   -moz-animation: rotating 10s linear infinite;

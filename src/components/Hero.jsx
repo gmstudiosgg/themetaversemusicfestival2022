@@ -5,7 +5,7 @@ import theme, { breakpoints } from "../../utils/theme";
 import mvmfLogo from "../images/logo-metaverse.png";
 import dclLogo from "../images/logo-dcl.svg";
 import star from "../images/star.svg";
-import whiteRabbit from "../images/rabbit.gif";
+import whiteRabbit from "../images/rabbit.svg";
 import polygon from "../images/STD-polygon.svg";
 import { Container } from "./Container";
 

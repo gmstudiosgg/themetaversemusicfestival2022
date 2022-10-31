@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet";
 import Layout from "./../components/Layout";
 import Hero from "./../components/Hero";
 import Banner from "../components/Banner";
-import StarsScene from "../components/Stars";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import BannerMarquee from "../components/Marquee";
@@ -97,7 +96,6 @@ const IndexPage = () => {
         </header>
         <main>{showVideo && <Banner setShowVideo={setShowVideo} />}</main>
       </Layout>
-      <StarsScene />
     </StyledIndexPage>
   );
 };

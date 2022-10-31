@@ -5,7 +5,7 @@ import title from '../../images/stages-title.png';
 import stage from '../../images/stage-demo.png';
 
 const Stages = () => (
-    <Section>
+    <Section id="stages">
         <Container>
             <Title src={title} />
             <StagesContainer>
