@@ -210,6 +210,7 @@ const AboutButtonLink = styled.button`
   padding: 16px 32px;
   border: 4px solid ${theme.white};
   border-radius: 120px;
+  font-weight: 700;
   transition: all 0.4s ease;
   backdrop-filter: blur(2px);
   cursor: crosshair;
@@ -224,6 +225,7 @@ const AboutButtonLink = styled.button`
 
   &:hover {
     color: black;
+    background: url('/texture.png');
     box-shadow:
           0 0 20px #fff,
           0 0 10px violet,

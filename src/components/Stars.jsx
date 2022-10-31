@@ -17,10 +17,10 @@ const Wrapper = () => {
                 <Stars radius={100} count={50} saturation={.5} factor={1} speed={.05} fade />
             </Float>
             <Float>
-                <Stars radius={200} count={100} saturation={1} factor={4} speed={.05} fade />
+                <Stars radius={200} count={200} saturation={1} factor={4} speed={.05} fade />
             </Float>
             <Float>
-                <Stars radius={300} count={200} saturation={3} factor={2} speed={1} fade />
+                <Stars radius={300} count={400} saturation={3} factor={2} speed={1} fade />
             </Float>
         </>
     )
