@@ -4,7 +4,7 @@ import theme, { breakpoints } from '../../../utils/theme';
 export const Section = styled.section`
     padding-top: 150px;
     padding-bottom: 150px;
-    background: url(faq-background.png);
+    backdrop-filter: blur(2px);
 `;
 
 export const Title = styled.img`

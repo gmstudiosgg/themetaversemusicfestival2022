@@ -7,7 +7,7 @@ import { Vector3 } from 'three'
 
 const Wrapper = () => {
     useFrame(({ camera }) => {
-        const positionZ = (window.scrollY / 10)
+        const positionZ = (window.scrollY / 20)
 
         camera.position.lerp(new Vector3(camera.position.x, camera.position.y, - positionZ), 0.3)
     })
