@@ -130,6 +130,7 @@ const PageLink = styled.li`
 
   a {
     transition: all 0.4s ease;
+    cursor: crosshair;
   }
   a:hover {
     color: ${theme.accent};
@@ -169,6 +170,9 @@ svg:hover {
   path {
     fill: ${theme.accent};
   }
+}
+a {
+  cursor: crosshair;
 }
 
 @media screen and (min-width: ${breakpoints.md}) {
