@@ -68,7 +68,6 @@ const About = (props) => {
           </AboutFooter>
         </StyledAbout>
       </Container>
-      <ThreeDee />
     </Section>
   );
 };
