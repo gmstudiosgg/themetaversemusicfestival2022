@@ -15,6 +15,7 @@ import Stages from "../components/Stages";
 import Partners from "../components/Partners";
 import Experiences from "../components/Experiences";
 import MerchBanner from "../components/MerchBanner";
+import LineUpSchedule from "../components/LineUpSchedule";
 
 const seo = {
   title: "Metaverse Music Festival | Decentraland",
@@ -89,6 +90,7 @@ const IndexPage = () => {
           <Hero />
           <BannerMarquee />
           <About />
+          <LineUpSchedule />
           <WatchTheTeaser setShowVideo={setShowVideo} />
           <Sitemap />
           <BannerMarquee />
