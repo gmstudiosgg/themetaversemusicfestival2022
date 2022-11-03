@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../../utils/theme";
 
 export const StyledLineUpSchedule = styled.div`
   margin-top: 48px;
@@ -14,6 +15,25 @@ export const StyledLineUpHeader = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+export const StyledHeaderImg = styled.img`
+  width: 100%;
+  height: 100%;
+  margin-left: 38px;
+  margin-right: 38px;
+  color: white;
+`;
+
+export const StyledHeaderVector = styled.img`
+  position: ${(props) => `${props.position}` || "static"};
+  width: ${(props) => `${props.width}`};
+  height: ${(props) => `${props.height}`};
+  align-self: ${(props) => `${props.alignSelf}` || null};
+  justify-self: ${(props) => `${props.justifySelf}` || null};
+  margin-top: ${(props) => `${props.marginTop}` || null};
+  left: ${(props) => `${props.left}` || null};
+  color: white;
 `;
 
 export const StyledLineUpBtnSection = styled.div`
@@ -62,7 +82,8 @@ export const StyledLineUpBtn = styled.button`
   transition: all 0.5s ease;
 
   &:hover {
-    background: #ffffff;
+    /* background: #ffffff; */
+    background: url("/texture.png");
     color: black;
   }
 `;
@@ -70,11 +91,16 @@ export const StyledLineUpBtn = styled.button`
 //---------------- BODY  -----------------------
 export const StyledLineUpBody = styled.section`
   height: auto;
+  margin-bottom: 135px;
+  margin-top: 90px;
+
+  display: flex;
+  flex-direction: row;
 `;
 
 export const StyledFullLineUpList = styled.p`
-  font-family: "Yapari Expanded";
-  font-weight: 500;
+  font-family: "Yapari Wide";
+  font-weight: 600;
   line-height: 80px;
   font-size: 32px;
   letter-spacing: 0.05em;
@@ -86,8 +112,29 @@ export const StyledTextHighLight = styled.span`
   font-weight: 700;
 `;
 
+export const StyledBodyBtnSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const StyledArrowBtn = styled.button`
+  width: 70px;
+  height: 70px;
+  margin-top: 21px;
+  margin-bottom: 21px;
+  background-color: black;
+  background-image: url(${(props) => `${props.src}`});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+`;
+
 // ------------ FOOTER  --------------------
 export const StyledLineUpFooter = styled.section`
+  display: flex;
+  flex-direction: column;
   height: 446px;
 `;
 
@@ -103,4 +150,20 @@ export const StyledEyeIcon = styled.img`
   height: 25px;
   margin-left: 16px;
   margin-right: 16px;
+`;
+
+// ------------ LINE UP DECORATOR --------------
+export const Decorator = styled.img`
+  display: none;
+  position: absolute;
+  transform: translateY(-50%);
+  width: ${(props) => `${props.width}`};
+  height: ${(props) => `${props.height}`};
+  left: ${(props) => `${props.left}` || null};
+  top: ${(props) => `${props.top}` || null};
+  bottom: ${(props) => `${props.bottom}` || null};
+  right: ${(props) => `${props.right}` || null};
+  @media screen and (min-width: ${breakpoints.md}) {
+    display: block;
+  }
 `;

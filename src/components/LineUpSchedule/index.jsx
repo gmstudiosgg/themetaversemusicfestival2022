@@ -16,9 +16,21 @@ import {
   StyledFullLineUpList,
   StyledEyeIcon,
   StyledTextHighLight,
+  StyledArrowBtn,
+  StyledBodyBtnSection,
+  Decorator,
+  StyledHeaderImg,
+  StyledHeaderVector,
 } from "./styles";
 import Logo from "../../images/logo-navbar.svg";
 import EyeVector from "../../images/Eye-Vector.svg";
+import ArrowUp from "../../images/arrowUp-vector.svg";
+import ArrowDown from "../../images/arrowDown-vector.svg";
+import star from "../../images/star.svg";
+import LineUpHeaderSvgGroup from "../../images/LineUpHeader-svgGroup.svg";
+import LineUpBarLine from "../../images/LineUpBarLine-Vector.svg";
+import LineUpBarLineInverted from "../../images/LineUpBarLineInverted-Vector.svg";
+import RectangleLine from "../../images/Rectangle-line.svg";
 
 // markup
 const LineUpSchedule = (props) => {
@@ -231,6 +243,31 @@ const LineUpSchedule = (props) => {
   return (
     <StyledLineUpSchedule id="lineup">
       <StyledLineUpHeader>
+        <StyledHeaderVector
+          src={RectangleLine}
+          width="1440px"
+          height="22px"
+          alignSelf="flex-start"
+          left="-65px"
+          position="relative"
+        />
+        <StyledHeaderVector
+          src={LineUpBarLine}
+          width="469px"
+          height="22px"
+          alignSelf="flex-end"
+          justifySelf="flex-end"
+        />
+        <StyledHeaderImg src={LineUpHeaderSvgGroup} />
+        {/* <Decorator src={star} width="22" height="62" />
+        <Decorator src={star} width="22" height="62" />
+        <Decorator
+          src={star}
+          top="50%"
+          left="-60px"
+          width="22px"
+          height="62px"
+        /> */}
         <StyledLineUpLogo src={Logo} />
         <StyledLineUpBtnSection>
           <StyledLineUpBtn
@@ -262,8 +299,48 @@ const LineUpSchedule = (props) => {
             </>
           ))}
         </StyledFullLineUpList>
+        <StyledBodyBtnSection>
+          <StyledArrowBtn src={ArrowUp} />
+          <StyledArrowBtn src={ArrowDown} />
+        </StyledBodyBtnSection>
       </StyledLineUpBody>
-      <StyledLineUpFooter></StyledLineUpFooter>
+      <StyledLineUpFooter>
+        <StyledLineUpBtnSection>
+          <StyledLineUpBtn
+            onClick={() => setCurrentSection("lineup")}
+            label={"⟶ Full Lineup"}
+          >
+            {"FULL LINE UP"}
+          </StyledLineUpBtn>
+          {days.map((dayInfo, i) => (
+            <StyledLineUpBtn
+              className={currentDay === i + 1 ? "selected" : ""}
+              onClick={() => {
+                handleDaySelection(i + 1);
+              }}
+              label={`⟶ Day 0${i + 1}`}
+            >
+              {`${dayInfo.date}`}
+            </StyledLineUpBtn>
+          ))}
+        </StyledLineUpBtnSection>
+        <StyledHeaderVector
+          src={LineUpBarLineInverted}
+          width="469px"
+          height="22px"
+          alignSelf="flex-start"
+          justifySelf="flex-start"
+          marginTop="285px"
+        />
+        <StyledHeaderVector
+          src={RectangleLine}
+          width="1440px"
+          height="22px"
+          alignSelf="flex-start"
+          left="-65px"
+          position="relative"
+        />
+      </StyledLineUpFooter>
 
       {/* <section
         className={`${currentSection} ${

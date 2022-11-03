@@ -8,7 +8,7 @@ import EyeTriengleIcon from "../../images/eye-triangle-icon.svg";
 import AboutTitleImg from "../../images/about-title.png";
 import Rabbit from "../../images/rabbit.gif";
 import { Container } from "../Container";
-import ThreeDee from '../ThreeDee';
+import ThreeDee from "../ThreeDee";
 
 const About = (props) => {
   return (
@@ -18,14 +18,22 @@ const About = (props) => {
           <AboutHeader>
             {" "}
             <AboutTitle src={AboutTitleImg} />
-            <RabbitAnimation src={Rabbit} alt="Follow the white rabbit" width={200} />
+            <RabbitAnimation
+              src={Rabbit}
+              alt="Follow the white rabbit"
+              width={200}
+            />
           </AboutHeader>
           <Aboutbody>
             <AboutBodyImgContainer>
               <AboutBodyImg>
                 <AboutBodyCodebar src={AboutThinIcon} />
                 <AboutMobileBodyCodebar src={AboutMobileThinIcon} />
-                <AboutBodyIlluminati src={EyeTriengleIcon} width="76px" height="76px" />
+                <AboutBodyIlluminati
+                  src={EyeTriengleIcon}
+                  width="76px"
+                  height="76px"
+                />
               </AboutBodyImg>
             </AboutBodyImgContainer>
             <AboutBodyText>
@@ -73,7 +81,7 @@ const About = (props) => {
 };
 
 const Section = styled.section`
-position: relative;
+  position: relative;
 `;
 
 const StyledAbout = styled.div`
@@ -110,7 +118,7 @@ const RabbitAnimation = styled.img`
   @media screen and (min-width: ${breakpoints.md}) {
     display: block;
   }
-`
+`;
 
 const Aboutbody = styled.section`
   display: flex;
@@ -139,7 +147,6 @@ const AboutBodyIlluminati = styled.img`
   display: none;
   @media screen and (min-width: ${breakpoints.md}) {
     display: block;
-    padding
   }
 `;
 
@@ -149,10 +156,10 @@ const AboutBodyText = styled.div`
   line-height: 22.5px;
   letter-spacing: 0.1em;
   @media screen and (min-width: ${breakpoints.md}) {
-      font-size: 18px;
-      line-height: 27px;
-      font-weight: 400;
-      padding-right: 64px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    padding-right: 64px;
   }
 `;
 
@@ -168,7 +175,7 @@ const AboutBodyImgContainer = styled.div`
 `;
 
 const AboutBodyImg = styled.div`
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -189,8 +196,7 @@ const TextHighlight = styled.span`
   font-weight: 500;
 `;
 
-const AboutFooter = styled.section`
-`;
+const AboutFooter = styled.section``;
 
 const AboutButtonContainer = styled.div`
   margin-top: 32px;
@@ -226,11 +232,8 @@ const AboutButtonLink = styled.button`
 
   &:hover {
     color: black;
-    background: url('/texture.png');
-    box-shadow:
-          0 0 20px #fff,
-          0 0 10px violet,
-          0 0 5px blue;
+    background: url("/texture.png");
+    box-shadow: 0 0 20px #fff, 0 0 10px violet, 0 0 5px blue;
 
     img {
       -webkit-animation: rotating 10s linear infinite;
@@ -238,7 +241,7 @@ const AboutButtonLink = styled.button`
       -ms-animation: rotating 10s linear infinite;
       -o-animation: rotating 10s linear infinite;
       animation: rotating 10s linear infinite;
-    
+
       @keyframes rotating {
         from {
           transform: rotate(0deg);
@@ -280,7 +283,7 @@ const ButtonDecorator = styled.img`
     height: 52px;
     top: 0;
     right: -5px;
-}
-`
+  }
+`;
 
 export default About;
