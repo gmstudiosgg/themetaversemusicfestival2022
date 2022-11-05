@@ -94,7 +94,9 @@ const IndexPage = () => {
           <Sitemap />
           <BannerMarquee />
           <Stages />
+          <BannerMarquee />
           <MerchBanner src={MerchBannerImg} />
+          <BannerMarquee />
           <Experiences />
           <BannerMarquee />
           <Partners />
