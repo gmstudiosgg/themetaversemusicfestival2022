@@ -24,6 +24,12 @@ export const Title = styled.img`
     }
 `;
 
+export const TextTitle = styled.p`
+    text-transform: uppercase;
+    font-size: 26px;
+    font-family 'Yapari Expanded'
+`
+
 export const StagesContainer = styled.div`
     margin: 32px 0;
     width: 100%;

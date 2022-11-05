@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from '../Container';
-import { Section, Stage, StagesContainer, Title, StageCard, StageImage, StageName, StageLocation, StageHover, StageButton } from './styles';
+import { Section, Stage, StagesContainer, Title, TextTitle, StageCard, StageImage, StageName, StageLocation, StageHover, StageButton } from './styles';
 import title from '../../images/stages-title.png';
 import stage from '../../images/stage-demo.png';
 import decentRally from '../../images/experiences/decent-rally.png';
@@ -12,7 +12,7 @@ import whiteRabbit from '../../images/experiences/follow-rabbit.png';
 const Experiences = () => (
     <Section id="experiences">
         <Container>
-            <Title src={title} />
+            <TextTitle>Experiences</TextTitle>
             <StagesContainer>
                 <Stage href="https://play.decentraland.org/?position=-54%2C66&realm=marvel&island=Ic9b0" target="_blank">
                     <StageCard>

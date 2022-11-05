@@ -3,7 +3,8 @@ import styled from "styled-components"
 import { Container } from "../Container"
 
 export const MerchBanner = ({ src, href }) => (
-    <Banner href={href} target="_blank" src={src}>
+    <Link href={href} target="_blank">
+    <Banner href={href} src={src}>
         <Wrapper>
             <Title>
                 Metaverse Music Festival 2022 Collectibles
@@ -13,7 +14,13 @@ export const MerchBanner = ({ src, href }) => (
             </Subtitle>
         </Wrapper>
     </Banner>
+    </Link>
 )
+
+const Link = styled.a`
+ cusrsor: crosshair;
+`
+
 const Banner = styled.div`
     width: 100%;
     height: 320px;

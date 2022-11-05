@@ -30,7 +30,7 @@ export const PartnersSection = styled.div`
     align-items: center;
 `
 export const PartnersImage = styled.img`
-    height: 80px;
+    height: 50px;
     width: auto;
 `
 

@@ -54,6 +54,7 @@ export const Answer = styled.p`
     line-height: 200%;
     transition: max-height 1s ease;
     overflow: hidden;
+    text-transform: none;
     max-height: ${props => props.open ? "auto" : 0}
 `
 

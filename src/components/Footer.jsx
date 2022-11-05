@@ -33,7 +33,7 @@ const Footer = (props) => {
     {
       name: "Discord",
       file: Discord,
-      url: "https://discord.com/invite/JV8CbCx",
+      url: "https://decentraland.org/discord",
     },
   ];
   
