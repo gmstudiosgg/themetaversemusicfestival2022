@@ -1,18 +1,16 @@
 import React from "react";
 import { Section, Title } from "./styles";
-import title from '../../images/sitemap-title.png';
+import title from "../../images/sitemap-title.png";
 import { Container } from "../Container";
 import { StaticImage } from "gatsby-plugin-image";
 
 const Sitemap = () => (
-    <Section id="sitemap">
-        <Container>
-            <Title src={title} />
-            <StaticImage
-                src={'./../../images/sitemap.png'}
-            />
-        </Container>
-    </Section>
-)
+  <Section id="sitemap">
+    <Container>
+      <Title src={title} />
+      <StaticImage src={"./../../images/siteMap-new.png"} />
+    </Container>
+  </Section>
+);
 
 export default Sitemap;

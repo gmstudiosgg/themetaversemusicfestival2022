@@ -15,6 +15,7 @@ import Stages from "../components/Stages";
 import Partners from "../components/Partners";
 import Experiences from "../components/Experiences";
 import MerchBanner from "../components/MerchBanner";
+import MerchBannerImg from "../images/merchBanner-svg.svg";
 
 const seo = {
   title: "Metaverse Music Festival | Decentraland",
@@ -93,7 +94,7 @@ const IndexPage = () => {
           <Sitemap />
           <BannerMarquee />
           <Stages />
-          <MerchBanner src="https://via.placeholder.com/1920x320" />
+          <MerchBanner src={MerchBannerImg} />
           <Experiences />
           <BannerMarquee />
           <Partners />
