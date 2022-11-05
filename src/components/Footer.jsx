@@ -11,16 +11,12 @@ const Footer = (props) => {
   const pages = [
     {
       name: "TERMS & SERVICES",
-      url: "#",
+      url: "https://decentraland.org/terms/",
     },
     {
       name: "PRIVACY POLICIES",
-      url: "#",
-    },
-    // {
-    //   name: "PRESS KIT",
-    //   url: "#",
-    // },
+      url: "https://decentraland.org/privacy/"
+    }
   ];
 
   const socialLinks = [
@@ -40,6 +36,7 @@ const Footer = (props) => {
       url: "https://discord.com/invite/JV8CbCx",
     },
   ];
+  
   return (
     <StyledFooter>
       <StyledLogoContainer>
