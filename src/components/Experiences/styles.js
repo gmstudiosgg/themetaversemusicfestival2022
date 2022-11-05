@@ -26,8 +26,9 @@ export const Title = styled.img`
 
 export const TextTitle = styled.p`
     text-transform: uppercase;
-    font-size: 26px;
-    font-family 'Yapari Expanded'
+    font-size: 36px;
+    font-family 'Yapari Expanded';
+    margin-bottom: 72px;
 `
 
 export const StagesContainer = styled.div`
