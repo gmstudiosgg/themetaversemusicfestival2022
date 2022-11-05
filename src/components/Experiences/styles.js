@@ -2,7 +2,6 @@ import styled from "styled-components";
 import theme, { breakpoints } from '../../../utils/theme';
 
 export const Section = styled.section`
-    padding-top: 150px;
     padding-bottom: 150px;
     background: black;
 `;
@@ -44,7 +43,7 @@ export const StagesContainer = styled.div`
     }
 `;
 
-export const Stage = styled.div`
+export const Stage = styled.a`
     margin-bottom: 16px;
     cursor: crosshair;
 `
@@ -87,12 +86,13 @@ export const StageImage = styled.img`
 
 export const StageName = styled.p`
     font-family: 'Yapari Expanded';
-    font-size: 16px;
+    font-size: 12px;
     line-height: 120%;
     font-weight: 600;
     text-transform: uppercase;
     margin-top: 16px;
     margin-bottom: 8px;
+    min-height: 42px;
 `
 export const StageLocation = styled.caption`
     font-family: 'Yapari';
@@ -123,10 +123,14 @@ export const StageHover = styled.div`
 `
 
 export const StageButton = styled.button`
+      font-family: 'Yapari Expanded';
+      border: unset;
+      box-shadow: unset;
+      text-transform: uppercase;
       border-radius: 58px;
       padding: 8px 16px;
       font-weight: 700;
       color: black;
-      font-size: 14px;
+      font-size: 10px;
       cursor: crosshair;
 `

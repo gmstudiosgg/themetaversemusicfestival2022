@@ -51,6 +51,7 @@ export const CuratingImage = styled.img`
 export const ThanksSection = styled.div`
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 `
 
 export const ThanksItem = styled.a`

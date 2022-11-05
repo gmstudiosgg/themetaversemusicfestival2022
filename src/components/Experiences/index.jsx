@@ -3,15 +3,20 @@ import { Container } from '../Container';
 import { Section, Stage, StagesContainer, Title, StageCard, StageImage, StageName, StageLocation, StageHover, StageButton } from './styles';
 import title from '../../images/stages-title.png';
 import stage from '../../images/stage-demo.png';
+import decentRally from '../../images/experiences/decent-rally.png';
+import theVoice from '../../images/experiences/the-voice.png';
+import backstageQuest from '../../images/experiences/backstage-quest.png';
+import towerOfBabel from '../../images/experiences/tower-of-babel.png';
+import whiteRabbit from '../../images/experiences/follow-rabbit.png';
 
 const Experiences = () => (
     <Section id="experiences">
         <Container>
             <Title src={title} />
             <StagesContainer>
-                <Stage>
+                <Stage href="https://play.decentraland.org/?position=-54%2C66&realm=marvel&island=Ic9b0" target="_blank">
                     <StageCard>
-                        <StageImage src={stage} />
+                        <StageImage src={decentRally} />
                         <StageHover>
                             <StageButton>
                                 Jump in
@@ -19,15 +24,15 @@ const Experiences = () => (
                         </StageHover>
                     </StageCard>
                     <StageName>
-                        title
+                        Decent Rally
                     </StageName>
                     <StageLocation>
-                        [-67,70]
+                        [-54,66]
                     </StageLocation>
                 </Stage>
-                <Stage>
+                <Stage href="https://play.decentraland.org/?position=-67%2C86&realm=marvel&island=Ic5t9" target="_blank">
                     <StageCard>
-                        <StageImage src={stage} />
+                        <StageImage src={theVoice} />
                         <StageHover>
                             <StageButton>
                                 Jump in
@@ -35,15 +40,15 @@ const Experiences = () => (
                         </StageHover>
                     </StageCard>
                     <StageName>
-                        title
+                        The Voice
                     </StageName>
                     <StageLocation>
-                        [-67,70]
+                        [-67,86]
                     </StageLocation>
                 </Stage>
-                <Stage>
+                <Stage href="https://play.decentraland.org/?position=-63%2C54&realm=marvel&island=Ic5t9" target="_blank">
                     <StageCard>
-                        <StageImage src={stage} />
+                        <StageImage src={backstageQuest} />
                         <StageHover>
                             <StageButton>
                                 Jump in
@@ -51,15 +56,15 @@ const Experiences = () => (
                         </StageHover>
                     </StageCard>
                     <StageName>
-                        title
+                        Backstage Pass Quest
                     </StageName>
                     <StageLocation>
-                        [-67,70]
+                        [-63,54]
                     </StageLocation>
                 </Stage>
-                <Stage>
+                <Stage href="https://play.decentraland.org/?position=-63%2C71&realm=marvel&island=Ic5t9" target="_blank">
                     <StageCard>
-                        <StageImage src={stage} />
+                        <StageImage src={towerOfBabel} />
                         <StageHover>
                             <StageButton>
                                 Jump in
@@ -67,90 +72,26 @@ const Experiences = () => (
                         </StageHover>
                     </StageCard>
                     <StageName>
-                        title
+                        Tower of Babel
                     </StageName>
                     <StageLocation>
-                        [-67,70]
+                        [-63,71]
                     </StageLocation>
                 </Stage>
-                <Stage>
+                <Stage href="https://play.decentraland.org/?position=-57%2C58&realm=marvel&island=Ic5t9" target="_blank">
                     <StageCard>
-                        <StageImage src={stage} />
+                        <StageImage src={whiteRabbit} />
                         <StageHover>
                             <StageButton>
-                                Jump in
+                                Jump In
                             </StageButton>
                         </StageHover>
                     </StageCard>
                     <StageName>
-                        title
+                        Follow the white rabbit
                     </StageName>
                     <StageLocation>
-                        [-67,70]
-                    </StageLocation>
-                </Stage>
-                <Stage>
-                    <StageCard>
-                        <StageImage src={stage} />
-                        <StageHover>
-                            <StageButton>
-                                Jump in
-                            </StageButton>
-                        </StageHover>
-                    </StageCard>
-                    <StageName>
-                        title
-                    </StageName>
-                    <StageLocation>
-                        [-67,70]
-                    </StageLocation>
-                </Stage>
-                <Stage>
-                    <StageCard>
-                        <StageImage src={stage} />
-                        <StageHover>
-                            <StageButton>
-                                Jump in
-                            </StageButton>
-                        </StageHover>
-                    </StageCard>
-                    <StageName>
-                        title
-                    </StageName>
-                    <StageLocation>
-                        [-67,70]
-                    </StageLocation>
-                </Stage>
-                <Stage>
-                    <StageCard>
-                        <StageImage src={stage} />
-                        <StageHover>
-                            <StageButton>
-                                Jump in
-                            </StageButton>
-                        </StageHover>
-                    </StageCard>
-                    <StageName>
-                        title
-                    </StageName>
-                    <StageLocation>
-                        [-67,70]
-                    </StageLocation>
-                </Stage>
-                <Stage>
-                    <StageCard>
-                        <StageImage src={stage} />
-                        <StageHover>
-                            <StageButton>
-                                Jump in
-                            </StageButton>
-                        </StageHover>
-                    </StageCard>
-                    <StageName>
-                        title
-                    </StageName>
-                    <StageLocation>
-                        [-67,70]
+                        [-57,58]
                     </StageLocation>
                 </Stage>
             </StagesContainer>

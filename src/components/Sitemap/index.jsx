@@ -9,7 +9,7 @@ const Sitemap = () => (
         <Container>
             <Title src={title} />
             <StaticImage
-                src={'./../../images/sitemap.png'}
+                src={'./../../images/sitemap.svg'}
             />
         </Container>
     </Section>

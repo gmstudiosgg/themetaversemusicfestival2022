@@ -7,6 +7,7 @@ import dclLogo from "../images/logo-dcl.svg";
 import star from "../images/star.svg";
 import whiteRabbit from "../images/rabbit.svg";
 import polygon from "../images/STD-polygon.svg";
+import Countdown from './Countdown';
 import { Container } from "./Container";
 
 const Hero = () => {
@@ -26,6 +27,9 @@ const Hero = () => {
         </LogoContainer>
         <EventDetails>
           <EventData>
+            <EventDataItem>
+              <Countdown />
+            </EventDataItem>
             <EventDataItem>
               <DateComponent className="event-data">
                 <p>
@@ -148,11 +152,11 @@ const DateComponent = styled.section`
   @media screen and (min-width: ${breakpoints.md}) {
     font-size: 18px;
     text-align: center;
-    letter-spacing: 14px;
+    letter-spacing: 2px;
   }
   
   @media screen and (min-width: ${breakpoints.l}) {
-    font-size: 26px;
+    font-size: 18px;
     line-height: 88%;
     width: 100%;
   }
@@ -170,9 +174,9 @@ const DateLocation = styled.span`
   letter-spacing: 2px;
   
   @media screen and (min-width: ${breakpoints.md}) {
-    font-size: 36px;
-    line-height: 72px;
-    letter-spacing: 7px;
+    font-size: 18px;
+    line-height: 48px;
+    letter-spacing: 2px;
   }
 `;
 

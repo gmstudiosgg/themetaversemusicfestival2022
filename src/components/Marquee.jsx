@@ -12,8 +12,8 @@ const BannerMarquee = (props) => {
         delay={props.delay && props.delay}
         gradient={false}
       >
-        • [-57,70] ©️DECENTRALAND NOV. 10-13 •
-        <DateHighlight> -12PM UTC </DateHighlight> • [-57,70] ©️DECENTRALAND
+        • [-62,70] ©️DECENTRALAND NOV. 10-13 •
+        <DateHighlight> -12PM UTC </DateHighlight> • [-62,70] ©️DECENTRALAND
         NOV. 10-13 •<DateHighlight> -12PM UTC </DateHighlight>
       </Marquee>
     </StyledBannerMarquee>

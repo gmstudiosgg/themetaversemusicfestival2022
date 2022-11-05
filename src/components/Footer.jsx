@@ -5,11 +5,12 @@ import { Twitter } from "./icons/Vector-Twitter.js";
 import { OpenSea } from "./icons/Vector-openSea";
 import theme, { breakpoints } from "../../utils/theme";
 import dclLogo from "../images/logo-dcl.svg";
+import { Instagram } from "./icons/Vector-Instagram.js";
 
 const Footer = (props) => {
   const pages = [
     {
-      name: "TERM & SERVICES",
+      name: "TERMS & SERVICES",
       url: "#",
     },
     {
@@ -29,10 +30,9 @@ const Footer = (props) => {
       url: "https://twitter.com/decentraland",
     },
     {
-      name: "Open Sea",
-      file: OpenSea,
-      // cambiar url a correcta
-      url: "https://www.reddit.com/r/decentraland/",
+      name: "Instagram",
+      file: Instagram,
+      url: "https://www.instagram.com/decentraland_foundation/",
     },
     {
       name: "Discord",

@@ -30,37 +30,37 @@ const About = (props) => {
             </AboutBodyImgContainer>
             <AboutBodyText>
               <AboutBodyParagraph>
-                A four-day celebration of music,{" "}
+                #DCLMVMF22 is a four-day celebration of{" "}
                 <TextHighlight>
-                  culture and creativity in the virtual social world
+                  music, innovation, culture, and creativity,
                 </TextHighlight>{" "}
-                of Decentraland, the Metaverse Festival is a grand collision of
-                light, sound and portable toilets.
+                held online in the virtual social world of Decentraland. The festival is open for any and all to attend, no ticket or VR headset required.
               </AboutBodyParagraph>
               <br />
               <AboutBodyParagraph>
-                It’s the first event of its kind – a fully decentralized
-                celebration of music that offers a weird and wonderful brew of
-                world-class headline acts, mind blowing stages, games, exclusive
-                artist merch, collectibles and more.
+                Prepare yourself for a musical experience unlike any you’ve attended before:
+                  <br />
+                  <br />
+                  -Check the schedule of{" "}<TextHighlight>150+ global artists </TextHighlight> the futuristic, cyberpunk festival grounds and become familiar with 15 different stages of the like you’d never see IRL. 
+                  <br />
+                  <br />
+                  -<TextHighlight>Explore</TextHighlight> from across genres featuring names such as{" "} <TextHighlight>Ozzy Ozbourne, Soulja Boy, Dillon Fancis</TextHighlight>nd main headliner <TextHighlight>Björk</TextHighlight> who’s closing act you will NOT want to miss
+                  <br />
+                  -<TextHighlight>Explore</TextHighlight> the futuristic, cyberpunk festival grounds and become familiar with 15 different stages of the like you’d never see IRL
+                  <br />
+                  -Dive into numerous Decentraland <TextHighlight>experiences</TextHighlight> as you peek into portaloos, take on the quest for a backstage pass, chase a white rabbit, and feel connected at the Tower of Babel.
+                  <br />
+                  -And much more!
               </AboutBodyParagraph>
               <br />
               <AboutBodyParagraph>
-                So, on <TextHighlight>October 21</TextHighlight> , dress your
-                avatar in your very best wearables and jump into an experience
-                like no other.
-              </AboutBodyParagraph>
-              <br />
-              <AboutBodyParagraph>
-                And if this is your first time in the virtual world, be sure to
-                take a look at our Festival FAQs, which explain how you can be a
-                part of the fun.
+                So get yourself some kaleidoscopic Wearables and killer dance Emotes in the Marketplace Festival Tab and jump into Decentraland on <TextHighlight>November 10.</TextHighlight>
               </AboutBodyParagraph>
             </AboutBodyText>
           </Aboutbody>
           <AboutFooter>
             <AboutButtonContainer>
-              <AboutButtonLink>
+              <AboutButtonLink href="https://play.decentraland.org/?position=-62%2C63&realm=marvel&island=Ic5t9" target="_blank">
                 SEE YOU IN THE METAVERSE!
                 <ButtonDecorator src={Logo} />
               </AboutButtonLink>
@@ -199,7 +199,7 @@ const AboutButtonContainer = styled.div`
   }
 `;
 
-const AboutButtonLink = styled.button`
+const AboutButtonLink = styled.a`
   unset: all;
   position: relative;
   width: 100%;
@@ -252,7 +252,7 @@ const AboutButtonLink = styled.button`
 
   @media screen and (min-width: ${breakpoints.md}) {
     font-size: 22px;
-    padding: 32px 72px;
+    padding: 32px 42px;
 
     img {
       -webkit-animation: unset;
@@ -265,7 +265,7 @@ const AboutButtonLink = styled.button`
 
   @media screen and (min-width: ${breakpoints.l}) {
     font-size: 26px;
-    padding: 48px 120px;
+    padding: 48px 60px;
   }
 `;
 
