@@ -276,10 +276,10 @@ const LineUpSchedule = (props) => {
 
   return (
     <StyledLineUpSchedule id="lineup">
-      <StyledLineUpHeader>
+      {/* <StyledLineUpHeader>
         <StyledHeaderImg src={LineUpHeaderSvgGroup} />
         <StyledLineUpLogo src={Logo} />
-      </StyledLineUpHeader>
+      </StyledLineUpHeader> */}
       <Container>
         <Title src={LineUpTitle} />
         <StyledLineUpBody>
@@ -301,23 +301,6 @@ const LineUpSchedule = (props) => {
           </StyledFullLineUpList>
         </StyledLineUpBody>
       </Container>
-      <StyledLineUpFooter>
-        <StyledHeaderVector
-          src={LineUpBarLineInverted}
-          width="469px"
-          height="22px"
-          alignSelf="flex-start"
-          justifySelf="flex-start"
-        />
-        <StyledHeaderVector
-          src={RectangleLine}
-          width="100%"
-          height="auto"
-          alignSelf="flex-start"
-          left="0px"
-          position="relative"
-        />
-      </StyledLineUpFooter>
     </StyledLineUpSchedule>
   );
 };

@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { breakpoints } from "../../../utils/theme";
 
 export const StyledLineUpSchedule = styled.div`
-  margin-top: 48px;
+  padding-top: 150px;
+  padding-bottom: 75px;
 `;
 
 // --------------  HEADER --------------------
@@ -26,7 +27,6 @@ export const Title = styled.img`
   width: 100%;
   height: auto;
   /* margin-bottom: 62px; */
-  align-self: center;
   @media screen and (min-width: ${breakpoints.md}) {
     width: 80%;
   }
