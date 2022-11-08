@@ -277,53 +277,9 @@ const LineUpSchedule = (props) => {
   return (
     <StyledLineUpSchedule id="lineup">
       <StyledLineUpHeader>
-        <StyledHeaderVector
-          src={RectangleLine}
-          width="100%"
-          height="auto"
-          alignSelf="flex-start"
-          left="0px"
-          position="relative"
-        />
-        <StyledHeaderVector
-          src={LineUpBarLine}
-          width="469px"
-          height="22px"
-          alignSelf="flex-end"
-          justifySelf="flex-end"
-        />
         <StyledHeaderImg src={LineUpHeaderSvgGroup} />
         <StyledLineUpLogo src={Logo} />
-        {/* <Decorator src={star} width="22" height="62" />
-        <Decorator src={star} width="22" height="62" />
-        <Decorator
-        src={star}
-        top="50%"
-        left="-60px"
-        width="22px"
-        height="62px"
-      /> */}
-        {/* <StyledLineUpBtnSection>
-            <StyledLineUpBtn
-            onClick={() => setCurrentSection("lineup")}
-            label={"⟶ Full Lineup"}
-            >
-            {"FULL LINE UP"}
-            </StyledLineUpBtn>
-            {days.map((dayInfo, i) => (
-              <StyledLineUpBtn
-              className={currentDay === i + 1 ? "selected" : ""}
-              onClick={() => {
-                handleDaySelection(i + 1);
-              }}
-              label={`⟶ Day 0${i + 1}`}
-              >
-              {`${dayInfo.date}`}
-              </StyledLineUpBtn>
-              ))}
-            </StyledLineUpBtnSection> */}
       </StyledLineUpHeader>
-
       <Container>
         <Title src={LineUpTitle} />
         <StyledLineUpBody>
@@ -343,32 +299,9 @@ const LineUpSchedule = (props) => {
               </>
             ))}
           </StyledFullLineUpList>
-          {/* <StyledBodyBtnSection>
-            <StyledArrowBtn src={ArrowUp} />
-            <StyledArrowBtn src={ArrowDown} />
-          </StyledBodyBtnSection> */}
         </StyledLineUpBody>
       </Container>
       <StyledLineUpFooter>
-        {/* <StyledLineUpBtnSection>
-            <StyledLineUpBtn
-              onClick={() => setCurrentSection("lineup")}
-              label={"⟶ Full Lineup"}
-            >
-              {"FULL LINE UP"}
-            </StyledLineUpBtn>
-            {days.map((dayInfo, i) => (
-              <StyledLineUpBtn
-                className={currentDay === i + 1 ? "selected" : ""}
-                onClick={() => {
-                  handleDaySelection(i + 1);
-                }}
-                label={`⟶ Day 0${i + 1}`}
-              >
-                {`${dayInfo.date}`}
-              </StyledLineUpBtn>
-            ))}
-          </StyledLineUpBtnSection> */}
         <StyledHeaderVector
           src={LineUpBarLineInverted}
           width="469px"
@@ -385,201 +318,8 @@ const LineUpSchedule = (props) => {
           position="relative"
         />
       </StyledLineUpFooter>
-
-      {/* <section
-        className={`${currentSection} ${
-          currentSection === "schedule" ? `day-${currentDay}` : ""
-        } content-toggler`}
-      >
-        {currentSection === "coming-soon" && (
-          <>
-            <h1>COMING SOONG</h1>
-          </>
-        )}
-        {currentSection === "schedule" && (
-          <>
-            <Button
-              onClick={() => setCurrentSection("lineup")}
-              label={"⟶ Full Lineup"}
-            />
-            <div className="day-selector">
-              {days.map((dayInfo, i) => (
-                <Button
-                  className={currentDay === i + 1 ? "selected" : ""}
-                  onClick={() => {
-                    handleDaySelection(i + 1);
-                  }}
-                  label={`⟶ Day 0${i + 1}`}
-                />
-              ))}
-            </div>
-            <h2 className="column-title">SCHEDULE</h2>
-            <DaySchedule
-              dayNumber={currentDay}
-              dayInfo={days[currentDay - 1]}
-            />
-          </>
-        )}
-        {currentSection === "lineup" && (
-          <> */}
-      {/* <Button
-                        type={'black'}
-                        label={'⟶ Schedule'}
-                        onClick={() => (setCurrentSection('schedule'))}
-                    /> */}
-      {/* <h2 className="column-title">FULL LINEUP</h2>
-            <section className="lineup-body"> */}
-      {/* {lineup.map((stage, key) => (
-                            <div key={key} className="stage-lineup">
-                                <h3>{stage.stageName}</h3>
-                                <p>
-                                    {stage.artists.map((artist,key) => (
-                                        <>
-                                            <span key={key}>{artist}</span>
-                                            <span className="dash"> / </span>
-                                        </>
-                                    ))}
-                                </p>
-                            </div>
-                        ))} */}
-      {/* <p className="raw-lineup">
-                {lineupRaw.map((artist, key) => (
-                  <>
-                    <span key={key}>{artist}</span>
-                    <span className="dash"> / </span>
-                  </>
-                ))}
-              </p>
-            </section>
-          </>
-        )}
-      </section> */}
     </StyledLineUpSchedule>
   );
 };
 
-/*<div>
-
-
- background: black;
-  .content-toggler {
-    display: flex;
-    min-height: 850px;
-    .button {
-      color: white;
-      border: 1px solid #b836a9;
-      max-width: 232px;
-      margin-bottom: 32px;
-      transition: 0.1s ease-in-out all;
-      @media screen and (max-width: ${breakpoints.md}) {
-        margin-bottom: 30px;
-        width: 100%;
-      }
-      &:hover {
-        color: black;
-        background: white;
-        border-color: transparent;
-      }
-    }
-    .column-title {
-      font-weight: 500;
-      font-size: 81px;
-      position: relative;
-      z-index: 1;
-      @media screen and (max-width: ${breakpoints.md}) {
-        font-size: 54px;
-      }
-    }
-  }
-  .schedule {
-    padding: 52px 70px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    transition: 0.25s ease-in-out all;
-    @media screen and (max-width: ${breakpoints.md}) {
-      padding: 52px 24px;
-    }
-    .day-selector {
-      display: flex;
-      .button {
-        margin-right: 16px;
-        @media screen and (max-width: ${breakpoints.md}) {
-          margin-right: 4px;
-        }
-        &.selected {
-          background: white;
-          color: black;
-          border-color: transparent;
-        }
-      }
-    }
-    &.day-1 {
-      background: #0025ae;
-    }
-    &.day-2 {
-      background: #2a5b63;
-    }
-    &.day-3 {
-      background: #3f00ae;
-    }
-    &.day-4 {
-      background: #6d43c1;
-    }
-    .column-title {
-      margin-bottom: 50px;
-    }
-  }
-  .lineup {
-    height: unset;
-    padding: 52px 0px 52px 70px;
-    background: black;
-    display: flex;
-    flex-direction: column;
-    @media screen and (max-width: ${breakpoints.md}) {
-      padding: 52px 24px;
-      flex-direction: column;
-    }
-    .raw-lineup {
-      font-size: 42px;
-      line-height: 58px;
-      width: 80%;
-      @media screen and (max-width: ${breakpoints.md}) {
-        font-size: 27px;
-        line-height: 50px;
-        span {
-          display: block;
-          &.dash {
-            display: none;
-          }
-        }
-      }
-    }
-    .stage-lineup {
-      margin-top: 20px;
-      margin-bottom: 120px;
-      h3 {
-        font-size: 52px;
-      }
-      p {
-        margin-top: 20px;
-        font-size: 38px;
-        line-height: 80px;
-        width: 75%;
-        opacity: 0.7;
-        @media screen and (max-width: ${breakpoints.md}) {
-          font-size: 27px;
-          line-height: 50px;
-        }
-      }
-    }
-    .column-title {
-      margin-bottom: 40px;
-      color: white;
-      @media screen and (max-width: ${breakpoints.md}) {
-        margin-bottom: 20px;
-      }
-    }
-  } 
-</div> */
 export default LineUpSchedule;

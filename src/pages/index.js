@@ -91,6 +91,7 @@ const IndexPage = () => {
           <Hero />
           <BannerMarquee />
           <About />
+          <BannerMarquee />
           <LineUpSchedule />
           <WatchTheTeaser setShowVideo={setShowVideo} />
           <Stages />
