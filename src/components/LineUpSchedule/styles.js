@@ -4,8 +4,6 @@ import { breakpoints } from "../../../utils/theme";
 export const StyledLineUpSchedule = styled.div`
   margin-top: 48px;
   margin-bottom: 272px;
-  margin-left: 64px;
-  margin-right: 64px;
 `;
 
 // --------------  HEADER --------------------
@@ -23,6 +21,25 @@ export const StyledHeaderImg = styled.img`
   margin-left: 38px;
   margin-right: 38px;
   color: white;
+`;
+
+export const Title = styled.img`
+  width: 100%;
+  height: auto;
+  /* margin-bottom: 62px; */
+  align-self: center;
+  @media screen and (min-width: ${breakpoints.md}) {
+    width: 80%;
+  }
+  @media screen and (min-width: ${breakpoints.l}) {
+    width: 70%;
+  }
+  @media screen and (min-width: ${breakpoints.xl}) {
+    width: 60%;
+  }
+  @media screen and (min-width: ${breakpoints.xxl}) {
+    width: 50%;
+  }
 `;
 
 export const StyledHeaderVector = styled.img`
@@ -107,6 +124,12 @@ export const StyledFullLineUpList = styled.p`
   color: #ffffff;
 `;
 
+export const StyledHighLight = styled.span`
+  font-family: "Yapari Wide";
+  font-weight: 800;
+  text-shadow: 0 0 6px #fff;
+`;
+
 export const StyledTextHighLight = styled.span`
   font-family: "Yapari Expanded";
   font-weight: 700;
@@ -135,7 +158,6 @@ export const StyledArrowBtn = styled.button`
 export const StyledLineUpFooter = styled.section`
   display: flex;
   flex-direction: column;
-  height: 446px;
 `;
 
 // ----------- EXTRA  -----------------

@@ -5,6 +5,7 @@ import { breakpoints } from "../../../utils/theme";
 import styled from "styled-components";
 import { days } from "../../../utils/days-data";
 import DaySchedule from "../DaySchedule";
+import { Container } from "../Container";
 import {
   StyledLineUpSchedule,
   StyledLineUpHeader,
@@ -21,6 +22,8 @@ import {
   Decorator,
   StyledHeaderImg,
   StyledHeaderVector,
+  StyledHighLight,
+  Title,
 } from "./styles";
 import Logo from "../../images/logo-navbar.svg";
 import EyeVector from "../../images/Eye-Vector.svg";
@@ -31,6 +34,7 @@ import LineUpHeaderSvgGroup from "../../images/LineUpHeader-svgGroup.svg";
 import LineUpBarLine from "../../images/LineUpBarLine-Vector.svg";
 import LineUpBarLineInverted from "../../images/LineUpBarLineInverted-Vector.svg";
 import RectangleLine from "../../images/Rectangle-line.svg";
+import LineUpTitle from "../../images/lineUpTitle-png.png";
 
 // markup
 const LineUpSchedule = (props) => {
@@ -158,97 +162,127 @@ const LineUpSchedule = (props) => {
     },
   ];
 
-  const lineupRaw = [
-    "3LAU",
-    "AARON SEVILLA",
-    "ADAM BEATTIE",
-    "AKIRA THE DON",
-    "ALABASTER DE PLUME",
-    "ALISON WONDERLAND",
-    "ALUNA [OF ALUNAGEORGE]",
-    "AMADIS AND THE AMBASSADORS",
-    "AMBER VAN DAY",
-    "AUTOGRAF",
-    "AWALE",
-    "BEMET",
-    "BEN WALKER & KIRSTY MERRYN",
-    "BENJI PATTERSON",
-    "BERRY GALAZKA",
-    "BOOMBOXHEAD",
-    "BROOKE SHARKEY",
-    "CHAIM",
-    "CHARLIE G",
-    "CHRISTIAN SMITH",
-    "COCO MAMBA",
-    "CODY FROST",
-    "CONNIE DIGITAL",
-    "CONOR BYRNE",
-    "CROOKED COLOURS",
-    "DAN KORN",
-    "DANA IMMANUEL & THE STOLEN BAND",
-    "DANNY TENAGLIA",
-    "DEADMAU5",
-    "DIZRAELI",
-    "DJANAN TURAN",
-    "DRUNKEN KONG",
-    "EFFECTIVE",
-    "EYES OF BEL",
-    "FLATS & SHARPS",
-    "HARRISON FIRST",
-    "ICHI",
-    "ILARIO FERRARI TRIO",
-    "ISAK'S ISLAND",
-    "KATE OZZ",
-    "LÈA MONDO",
-    "LEONIE EVANS",
-    "LOKYII",
-    "LOUIS III",
-    "M G BOULTER",
-    "MAGA",
-    "MAGIT CACOON",
-    "MAGNOS",
-    "MAI WORLD",
-    "MARCUS BONFANTI IN THE DELTA TRIO",
-    "MIGHTY 33",
-    "MIKEY KENNEY & FRIENDS",
-    "MIYA MIYA",
-    "MORSKI",
-    "NANCY",
-    "NICK HART & TOM DIPPER",
-    "NINA NESBITT",
-    "ORII",
-    "OVY ON THE DRUMS",
-    "PARIS HILTON",
-    "RAY GELATO GIANTS",
-    "RENU",
-    "RIOGHNACH CONNOLLY & ELLIS DAVIES",
-    "RIZ LA VIE",
-    "SADANDSOLO",
-    "SAMRA",
-    "SAWLEAD",
-    "SCRILLA",
-    "SHAMA RAHMAN",
-    "SOFIA CAMPOS",
-    "STUDIO NOUVEAU",
-    "THE BRITISH COLLECTIVE",
-    "THE LUNA TAPES",
-    "THE TURBANS",
-    "THE TURBANS UNPLUGGED",
-    "VANDAL",
-    "VIRTUNAUT",
-    "WILL JEURGENS",
-    "YOUNG WATERS",
+  const lineupRawHighLights = [
+    "Björk",
+    "Ozzy Osbourne",
+    "Dillon Francis",
+    "Soulja Boy",
+    "Izzy Bizu",
+    "Megadeth",
   ];
+  const lineupRaw = [
+    "Vladimir Cauchemar",
+    "SNH48",
+    "Maia Wright",
+    "Spottie WiFi",
+    "Atarashii Gakko!",
+    "Nicola Fasano",
+    "Gramatik + Luxas",
+    "Maija Kauhanen",
+    "Stickmen Project",
+    "Breland",
+    "Akira the Don",
+    "Losers",
+    "Harrison First",
+    "Steve Saiko",
+    "Eliane Correa",
+    "2AM + PIP",
+    "Erika Krall",
+    "Lian Gold",
+    "and many more",
+  ];
+
+  // const lineupRaw = [
+  //   "3LAU",
+  //   "AARON SEVILLA",
+  //   "ADAM BEATTIE",
+  //   "AKIRA THE DON",
+  //   "ALABASTER DE PLUME",
+  //   "ALISON WONDERLAND",
+  //   "ALUNA [OF ALUNAGEORGE]",
+  //   "AMADIS AND THE AMBASSADORS",
+  //   "AMBER VAN DAY",
+  //   "AUTOGRAF",
+  //   "AWALE",
+  //   "BEMET",
+  //   "BEN WALKER & KIRSTY MERRYN",
+  //   "BENJI PATTERSON",
+  //   "BERRY GALAZKA",
+  //   "BOOMBOXHEAD",
+  //   "BROOKE SHARKEY",
+  //   "CHAIM",
+  //   "CHARLIE G",
+  //   "CHRISTIAN SMITH",
+  //   "COCO MAMBA",
+  //   "CODY FROST",
+  //   "CONNIE DIGITAL",
+  //   "CONOR BYRNE",
+  //   "CROOKED COLOURS",
+  //   "DAN KORN",
+  //   "DANA IMMANUEL & THE STOLEN BAND",
+  //   "DANNY TENAGLIA",
+  //   "DEADMAU5",
+  //   "DIZRAELI",
+  //   "DJANAN TURAN",
+  //   "DRUNKEN KONG",
+  //   "EFFECTIVE",
+  //   "EYES OF BEL",
+  //   "FLATS & SHARPS",
+  //   "HARRISON FIRST",
+  //   "ICHI",
+  //   "ILARIO FERRARI TRIO",
+  //   "ISAK'S ISLAND",
+  //   "KATE OZZ",
+  //   "LÈA MONDO",
+  //   "LEONIE EVANS",
+  //   "LOKYII",
+  //   "LOUIS III",
+  //   "M G BOULTER",
+  //   "MAGA",
+  //   "MAGIT CACOON",
+  //   "MAGNOS",
+  //   "MAI WORLD",
+  //   "MARCUS BONFANTI IN THE DELTA TRIO",
+  //   "MIGHTY 33",
+  //   "MIKEY KENNEY & FRIENDS",
+  //   "MIYA MIYA",
+  //   "MORSKI",
+  //   "NANCY",
+  //   "NICK HART & TOM DIPPER",
+  //   "NINA NESBITT",
+  //   "ORII",
+  //   "OVY ON THE DRUMS",
+  //   "PARIS HILTON",
+  //   "RAY GELATO GIANTS",
+  //   "RENU",
+  //   "RIOGHNACH CONNOLLY & ELLIS DAVIES",
+  //   "RIZ LA VIE",
+  //   "SADANDSOLO",
+  //   "SAMRA",
+  //   "SAWLEAD",
+  //   "SCRILLA",
+  //   "SHAMA RAHMAN",
+  //   "SOFIA CAMPOS",
+  //   "STUDIO NOUVEAU",
+  //   "THE BRITISH COLLECTIVE",
+  //   "THE LUNA TAPES",
+  //   "THE TURBANS",
+  //   "THE TURBANS UNPLUGGED",
+  //   "VANDAL",
+  //   "VIRTUNAUT",
+  //   "WILL JEURGENS",
+  //   "YOUNG WATERS",
+  // ];
 
   return (
     <StyledLineUpSchedule id="lineup">
       <StyledLineUpHeader>
         <StyledHeaderVector
           src={RectangleLine}
-          width="1440px"
-          height="22px"
+          width="100%"
+          height="auto"
           alignSelf="flex-start"
-          left="-65px"
+          left="0px"
           position="relative"
         />
         <StyledHeaderVector
@@ -259,85 +293,95 @@ const LineUpSchedule = (props) => {
           justifySelf="flex-end"
         />
         <StyledHeaderImg src={LineUpHeaderSvgGroup} />
+        <StyledLineUpLogo src={Logo} />
         {/* <Decorator src={star} width="22" height="62" />
         <Decorator src={star} width="22" height="62" />
         <Decorator
-          src={star}
-          top="50%"
-          left="-60px"
-          width="22px"
-          height="62px"
-        /> */}
-        <StyledLineUpLogo src={Logo} />
-        <StyledLineUpBtnSection>
-          <StyledLineUpBtn
+        src={star}
+        top="50%"
+        left="-60px"
+        width="22px"
+        height="62px"
+      /> */}
+        {/* <StyledLineUpBtnSection>
+            <StyledLineUpBtn
             onClick={() => setCurrentSection("lineup")}
             label={"⟶ Full Lineup"}
-          >
+            >
             {"FULL LINE UP"}
-          </StyledLineUpBtn>
-          {days.map((dayInfo, i) => (
-            <StyledLineUpBtn
+            </StyledLineUpBtn>
+            {days.map((dayInfo, i) => (
+              <StyledLineUpBtn
               className={currentDay === i + 1 ? "selected" : ""}
               onClick={() => {
                 handleDaySelection(i + 1);
               }}
               label={`⟶ Day 0${i + 1}`}
-            >
+              >
               {`${dayInfo.date}`}
-            </StyledLineUpBtn>
-          ))}
-        </StyledLineUpBtnSection>
+              </StyledLineUpBtn>
+              ))}
+            </StyledLineUpBtnSection> */}
       </StyledLineUpHeader>
 
-      <StyledLineUpBody>
-        <StyledFullLineUpList className="raw-lineup">
-          {lineupRaw.map((artist, key) => (
-            <>
-              <span key={key}>{artist}</span>
-              <StyledEyeIcon src={EyeVector} />
-            </>
-          ))}
-        </StyledFullLineUpList>
-        <StyledBodyBtnSection>
-          <StyledArrowBtn src={ArrowUp} />
-          <StyledArrowBtn src={ArrowDown} />
-        </StyledBodyBtnSection>
-      </StyledLineUpBody>
+      <Container>
+        <Title src={LineUpTitle} />
+        <StyledLineUpBody>
+          <StyledFullLineUpList className="raw-lineup">
+            {lineupRawHighLights.map((artist, key) => (
+              <>
+                <StyledHighLight>
+                  <span key={key}>{artist.toUpperCase()}</span>
+                </StyledHighLight>
+                <StyledEyeIcon src={EyeVector} />
+              </>
+            ))}
+            {lineupRaw.map((artist, key) => (
+              <>
+                <span key={key}>{artist.toUpperCase()}</span>
+                <StyledEyeIcon src={EyeVector} />
+              </>
+            ))}
+          </StyledFullLineUpList>
+          {/* <StyledBodyBtnSection>
+            <StyledArrowBtn src={ArrowUp} />
+            <StyledArrowBtn src={ArrowDown} />
+          </StyledBodyBtnSection> */}
+        </StyledLineUpBody>
+      </Container>
       <StyledLineUpFooter>
-        <StyledLineUpBtnSection>
-          <StyledLineUpBtn
-            onClick={() => setCurrentSection("lineup")}
-            label={"⟶ Full Lineup"}
-          >
-            {"FULL LINE UP"}
-          </StyledLineUpBtn>
-          {days.map((dayInfo, i) => (
+        {/* <StyledLineUpBtnSection>
             <StyledLineUpBtn
-              className={currentDay === i + 1 ? "selected" : ""}
-              onClick={() => {
-                handleDaySelection(i + 1);
-              }}
-              label={`⟶ Day 0${i + 1}`}
+              onClick={() => setCurrentSection("lineup")}
+              label={"⟶ Full Lineup"}
             >
-              {`${dayInfo.date}`}
+              {"FULL LINE UP"}
             </StyledLineUpBtn>
-          ))}
-        </StyledLineUpBtnSection>
+            {days.map((dayInfo, i) => (
+              <StyledLineUpBtn
+                className={currentDay === i + 1 ? "selected" : ""}
+                onClick={() => {
+                  handleDaySelection(i + 1);
+                }}
+                label={`⟶ Day 0${i + 1}`}
+              >
+                {`${dayInfo.date}`}
+              </StyledLineUpBtn>
+            ))}
+          </StyledLineUpBtnSection> */}
         <StyledHeaderVector
           src={LineUpBarLineInverted}
           width="469px"
           height="22px"
           alignSelf="flex-start"
           justifySelf="flex-start"
-          marginTop="285px"
         />
         <StyledHeaderVector
           src={RectangleLine}
-          width="1440px"
-          height="22px"
+          width="100%"
+          height="auto"
           alignSelf="flex-start"
-          left="-65px"
+          left="0px"
           position="relative"
         />
       </StyledLineUpFooter>
