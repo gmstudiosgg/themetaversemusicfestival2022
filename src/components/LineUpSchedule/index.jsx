@@ -286,18 +286,14 @@ const LineUpSchedule = (props) => {
           <StyledFullLineUpList className="raw-lineup">
             {lineupRawHighLights.map((artist, key) => (
               <>
-                <StyledHighLight>
-                  <span key={key}>{artist.toUpperCase()}</span>
-                </StyledHighLight>
+                <span key={key}>{artist.toUpperCase()}</span>
                 <StyledEyeIcon src={EyeVector} />
               </>
             ))}
             {lineupRaw.map((artist, key) => (
               <>
-                <StyledHighLight>
-                  <span key={key}>{artist.toUpperCase()}</span>
-                  <StyledEyeIcon src={EyeVector} />
-                </StyledHighLight>
+                <span key={key}>{artist.toUpperCase()}</span>
+                <StyledEyeIcon src={EyeVector} />
               </>
             ))}
           </StyledFullLineUpList>
