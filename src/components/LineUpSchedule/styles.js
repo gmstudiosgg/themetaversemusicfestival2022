@@ -3,7 +3,6 @@ import { breakpoints } from "../../../utils/theme";
 
 export const StyledLineUpSchedule = styled.div`
   margin-top: 48px;
-  margin-bottom: 272px;
 `;
 
 // --------------  HEADER --------------------
