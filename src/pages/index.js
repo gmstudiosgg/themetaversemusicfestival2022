@@ -15,7 +15,7 @@ import Stages from "../components/Stages";
 import Partners from "../components/Partners";
 import Experiences from "../components/Experiences";
 import MerchBanner from "../components/MerchBanner";
-import LineUpSchedule from "../components/LineUpSchedule";
+import merchBanner from "../images/merch-banner.png"
 
 const seo = {
   title: "Metaverse Music Festival | Decentraland",
@@ -90,13 +90,13 @@ const IndexPage = () => {
           <Hero />
           <BannerMarquee />
           <About />
-          <LineUpSchedule />
           <WatchTheTeaser setShowVideo={setShowVideo} />
-          <Sitemap />
-          <BannerMarquee />
           <Stages />
-          <MerchBanner src="https://via.placeholder.com/1920x320" />
           <Experiences />
+          <BannerMarquee noBorderBottom />
+          <MerchBanner src={merchBanner} href="https://market.decentraland.org/MVMF22?assetType=item&section=wearables&vendor=decentraland&page=1&sortBy=recently_listed&onlyOnSale=true" target="_blank" />
+          <BannerMarquee noBorderTop direction="right" />
+          <Sitemap />
           <BannerMarquee />
           <Partners />
           <BannerMarquee />

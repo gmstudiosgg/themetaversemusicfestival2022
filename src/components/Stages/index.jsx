@@ -1,159 +1,61 @@
 import React from 'react';
 import { Container } from '../Container';
-import { Section, Stage, StagesContainer, Title, StageCard, StageImage, StageName, StageLocation, StageHover, StageButton } from './styles';
+import { Section, Stage, StyledBannerMarquee, Title, StageCard, StageImage, StageName, StageLocation, StageHover, StageButton } from './styles';
 import title from '../../images/stages-title.png';
-import stage from '../../images/stage-demo.png';
+import stages from './stages';
+import Marquee from 'react-fast-marquee';
+import genericStages from './genericStages';
 
 const Stages = () => (
     <Section id="stages">
         <Container>
             <Title src={title} />
-            <StagesContainer>
-                <Stage>
-                    <StageCard>
-                        <StageImage src={stage} />
-                        <StageHover>
-                            <StageButton>
-                                Jump in
-                            </StageButton>
-                        </StageHover>
-                    </StageCard>
-                    <StageName>
-                        Random Ravers
-                    </StageName>
-                    <StageLocation>
-                        [-67,70]
-                    </StageLocation>
-                </Stage>
-                <Stage>
-                    <StageCard>
-                        <StageImage src={stage} />
-                        <StageHover>
-                            <StageButton>
-                                Jump in
-                            </StageButton>
-                        </StageHover>
-                    </StageCard>
-                    <StageName>
-                        Random Ravers
-                    </StageName>
-                    <StageLocation>
-                        [-67,70]
-                    </StageLocation>
-                </Stage>
-                <Stage>
-                    <StageCard>
-                        <StageImage src={stage} />
-                        <StageHover>
-                            <StageButton>
-                                Jump in
-                            </StageButton>
-                        </StageHover>
-                    </StageCard>
-                    <StageName>
-                        Random Ravers
-                    </StageName>
-                    <StageLocation>
-                        [-67,70]
-                    </StageLocation>
-                </Stage>
-                <Stage>
-                    <StageCard>
-                        <StageImage src={stage} />
-                        <StageHover>
-                            <StageButton>
-                                Jump in
-                            </StageButton>
-                        </StageHover>
-                    </StageCard>
-                    <StageName>
-                        Random Ravers
-                    </StageName>
-                    <StageLocation>
-                        [-67,70]
-                    </StageLocation>
-                </Stage>
-                <Stage>
-                    <StageCard>
-                        <StageImage src={stage} />
-                        <StageHover>
-                            <StageButton>
-                                Jump in
-                            </StageButton>
-                        </StageHover>
-                    </StageCard>
-                    <StageName>
-                        Random Ravers
-                    </StageName>
-                    <StageLocation>
-                        [-67,70]
-                    </StageLocation>
-                </Stage>
-                <Stage>
-                    <StageCard>
-                        <StageImage src={stage} />
-                        <StageHover>
-                            <StageButton>
-                                Jump in
-                            </StageButton>
-                        </StageHover>
-                    </StageCard>
-                    <StageName>
-                        Random Ravers
-                    </StageName>
-                    <StageLocation>
-                        [-67,70]
-                    </StageLocation>
-                </Stage>
-                <Stage>
-                    <StageCard>
-                        <StageImage src={stage} />
-                        <StageHover>
-                            <StageButton>
-                                Jump in
-                            </StageButton>
-                        </StageHover>
-                    </StageCard>
-                    <StageName>
-                        Random Ravers
-                    </StageName>
-                    <StageLocation>
-                        [-67,70]
-                    </StageLocation>
-                </Stage>
-                <Stage>
-                    <StageCard>
-                        <StageImage src={stage} />
-                        <StageHover>
-                            <StageButton>
-                                Jump in
-                            </StageButton>
-                        </StageHover>
-                    </StageCard>
-                    <StageName>
-                        Random Ravers
-                    </StageName>
-                    <StageLocation>
-                        [-67,70]
-                    </StageLocation>
-                </Stage>
-                <Stage>
-                    <StageCard>
-                        <StageImage src={stage} />
-                        <StageHover>
-                            <StageButton>
-                                Jump in
-                            </StageButton>
-                        </StageHover>
-                    </StageCard>
-                    <StageName>
-                        Random Ravers
-                    </StageName>
-                    <StageLocation>
-                        [-67,70]
-                    </StageLocation>
-                </Stage>
-            </StagesContainer>
+            <StyledBannerMarquee>
+                <Marquee>
+                    {
+                        stages.map(({ name, href, src, coord }) => (
+                            <Stage href={href} target="_blank">
+                                <StageCard>
+                                    <StageImage src={src} />
+                                    <StageHover>
+                                        <StageButton>
+                                            Jump in
+                                        </StageButton>
+                                    </StageHover>
+                                </StageCard>
+                                <StageName>
+                                    {name}
+                                </StageName>
+                                <StageLocation>
+                                    [{coord}]
+                                </StageLocation>
+                            </Stage>
+                        ))
+                    }
+                </Marquee>
+                <Marquee direction="right">
+                    {
+                        genericStages.map(({ name, href, src, coord }) => (
+                            <Stage href={href} target="_blank">
+                                <StageCard>
+                                    <StageImage src={src} />
+                                    <StageHover>
+                                        <StageButton>
+                                            Jump in
+                                        </StageButton>
+                                    </StageHover>
+                                </StageCard>
+                                <StageName>
+                                    {name}
+                                </StageName>
+                                <StageLocation>
+                                    [{coord}]
+                                </StageLocation>
+                            </Stage>
+                        ))
+                    }
+                </Marquee>
+            </StyledBannerMarquee>
         </Container>
     </Section>
 )

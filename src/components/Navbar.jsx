@@ -21,12 +21,16 @@ const Navbar = (props) => {
     //   targetId: "lineup",
     // },
     {
-      label: "SITEMAP",
-      targetId: "sitemap",
-    },
-    {
       label: "STAGES",
       targetId: "stages",
+    },
+    {
+      label: "EXPERIENCES",
+      targetId: "experiences",
+    },
+    {
+      label: "SITEMAP",
+      targetId: "sitemap",
     },
     {
       label: "FAQ",
@@ -76,18 +80,18 @@ const Navbar = (props) => {
               <Twitter />
             </SocialIcon>
             <SocialIcon
-              href="https://decentraland.org/discord/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Discord />
-            </SocialIcon>
-            <SocialIcon
               href="https://www.instagram.com/decentraland_foundation/"
               target="_blank"
               rel="noreferrer"
             >
               <Instagram />
+            </SocialIcon>
+            <SocialIcon
+              href="https://decentraland.org/discord/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Discord />
             </SocialIcon>
           </div>
         </Nav>

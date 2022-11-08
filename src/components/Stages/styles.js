@@ -33,6 +33,7 @@ export const StagesContainer = styled.div`
     grid-template-rows: auto;
     grid-gap: 16px;
     justify-content: center;
+    flex-wrap: no-wrap;
     justify-items: center;
 
     @media screen and (min-width: ${breakpoints.md}) {
@@ -44,9 +45,10 @@ export const StagesContainer = styled.div`
     }
 `;
 
-export const Stage = styled.div`
+export const Stage = styled.a`
     margin-bottom: 16px;
     cursor: crosshair;
+    margin: 0 8px;
 `
 
 export const StageCard = styled.div`
@@ -71,18 +73,9 @@ export const StageCard = styled.div`
 `
 
 export const StageImage = styled.img`
-    max-width: 100%;
     aspect-ratio: 1 / 1.5;
     object-fit: cover;
-    width: 100%;
-
-    @media screen and (min-width: ${breakpoints.md}) {
-        aspect-ratio: 
-    }
-
-    @media screen and (min-width: ${breakpoints.l}) {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
+    height: 400px;
 `
 
 export const StageName = styled.p`
@@ -93,6 +86,8 @@ export const StageName = styled.p`
     text-transform: uppercase;
     margin-top: 16px;
     margin-bottom: 8px;
+    max-width: 170px;
+    min-height: 42px;
 `
 export const StageLocation = styled.caption`
     font-family: 'Yapari';
@@ -123,6 +118,8 @@ export const StageHover = styled.div`
 `
 
 export const StageButton = styled.button`
+      border: unset;
+      box-shadow: unset;
       border-radius: 58px;
       padding: 8px 16px;
       font-weight: 700;
@@ -130,3 +127,22 @@ export const StageButton = styled.button`
       font-size: 14px;
       cursor: crosshair;
 `
+
+export const StyledBannerMarquee = styled.div`
+  .marquee-container {
+    margin: 32px 0;
+    padding: 12px 0;
+    .overlay {
+      display: none;
+    }
+    .marquee {
+      min-width: unset;
+    }
+    * {
+      font-family: "Yapari expanded";
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+  }
+`;

@@ -44,14 +44,14 @@ const StyledButton = styled.a`
   background-size: 100% 100%;
   background-repeat: no-repeat;
   @media screen and (max-width: ${breakpoints.md}) {
-    font-size: 14px;
-    height: 48px;
-    line-height: 48px;
-    padding: 0 18px;
-  }
+      font-size: 14px;
+      height: 48px;
+      line-height: 48px;
+      padding: 0 18px;
+  };
   @media screen and (min-width: ${breakpoints.md}) {
     min-width: 350px;
-  }
+};
   :hover {
     color: ${theme.accent};
   }

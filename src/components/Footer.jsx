@@ -5,21 +5,18 @@ import { Twitter } from "./icons/Vector-Twitter.js";
 import { OpenSea } from "./icons/Vector-openSea";
 import theme, { breakpoints } from "../../utils/theme";
 import dclLogo from "../images/logo-dcl.svg";
+import { Instagram } from "./icons/Vector-Instagram.js";
 
 const Footer = (props) => {
   const pages = [
     {
-      name: "TERM & SERVICES",
-      url: "#",
+      name: "TERMS & SERVICES",
+      url: "https://decentraland.org/terms/",
     },
     {
       name: "PRIVACY POLICIES",
-      url: "#",
-    },
-    // {
-    //   name: "PRESS KIT",
-    //   url: "#",
-    // },
+      url: "https://decentraland.org/privacy/"
+    }
   ];
 
   const socialLinks = [
@@ -29,17 +26,17 @@ const Footer = (props) => {
       url: "https://twitter.com/decentraland",
     },
     {
-      name: "Open Sea",
-      file: OpenSea,
-      // cambiar url a correcta
-      url: "https://www.reddit.com/r/decentraland/",
+      name: "Instagram",
+      file: Instagram,
+      url: "https://www.instagram.com/decentraland_foundation/",
     },
     {
       name: "Discord",
       file: Discord,
-      url: "https://discord.com/invite/JV8CbCx",
+      url: "https://decentraland.org/discord",
     },
   ];
+  
   return (
     <StyledFooter>
       <StyledLogoContainer>

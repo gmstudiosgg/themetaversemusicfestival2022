@@ -7,6 +7,7 @@ import dclLogo from "../images/logo-dcl.svg";
 import star from "../images/star.svg";
 import whiteRabbit from "../images/rabbit.svg";
 import polygon from "../images/STD-polygon.svg";
+import Countdown from './Countdown';
 import { Container } from "./Container";
 
 const Hero = () => {
@@ -27,6 +28,9 @@ const Hero = () => {
         <EventDetails>
           <EventData>
             <EventDataItem>
+              <Countdown />
+            </EventDataItem>
+            <EventDataItem>
               <DateComponent className="event-data">
                 <p>
                   NOV. 10-13 • <DateHighlight>-12PM UTC</DateHighlight> •
@@ -46,8 +50,7 @@ const Hero = () => {
                 href="https://events.decentraland.org/event/?id=7148716b-ff25-4d5f-8267-55fed7ab15bc"
                 target="_blank"
               >
-                <WhiteRabbit src={whiteRabbit} />
-                <span>SAVE THE DATE</span>
+                <WhiteRabbit src={whiteRabbit} /> Save the date{" "}
                 <Polygon src={polygon} />
               </SaveTheDate>
             </EventDataItem>
@@ -82,10 +85,10 @@ const StyledHero = styled.div`
 `;
 
 export const LogoContainer = styled.div`
-  margin-bottom: 24px;
-  @media screen and (min-width: ${breakpoints.md}) {
-    padding: 0 33px;
-  }
+margin-bottom: 24px;
+@media screen and (min-width: ${breakpoints.md}) {
+  padding: 0 33px;
+}
 `;
 
 const StyledImage = styled.img`
@@ -145,19 +148,15 @@ const DateComponent = styled.section`
   padding-left: 0;
   width: 100%;
   text-align: center;
-
-  p {
-    font-family: "Yapari";
-  }
-
+  
   @media screen and (min-width: ${breakpoints.md}) {
     font-size: 18px;
     text-align: center;
-    letter-spacing: 14px;
+    letter-spacing: 2px;
   }
-
+  
   @media screen and (min-width: ${breakpoints.l}) {
-    font-size: 26px;
+    font-size: 18px;
     line-height: 88%;
     width: 100%;
   }
@@ -165,7 +164,6 @@ const DateComponent = styled.section`
 
 const DateHighlight = styled.span`
   color: ${theme.accent};
-  font-family: "Yapari";
 `;
 
 const DateLocation = styled.span`
@@ -174,11 +172,11 @@ const DateLocation = styled.span`
   line-height: 32px;
   font-weight: 600;
   letter-spacing: 2px;
-
+  
   @media screen and (min-width: ${breakpoints.md}) {
-    font-size: 36px;
-    line-height: 72px;
-    letter-spacing: 7px;
+    font-size: 18px;
+    line-height: 48px;
+    letter-spacing: 2px;
   }
 `;
 
@@ -216,7 +214,7 @@ const WhiteRabbit = styled.img`
   box-sizing: border-box;
   margin-right: 8px;
   border-right: 4px solid ${theme.accent};
-
+  
   @media screen and (min-width: ${breakpoints.md}) {
     width: 52px;
     padding-right: 16px;

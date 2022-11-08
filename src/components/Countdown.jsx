@@ -94,11 +94,11 @@ const StyledCountdown = styled.div`
       font-size: 26px;
 
       @media screen and (min-width: ${breakpoints.md}) {
-        font-size: 34px;
+        font-size: 28px;
       }
 
       @media screen and (min-width: ${breakpoints.l}) {
-        font-size: 44px;
+        font-size: 36px;
       }
     }
     .label {
