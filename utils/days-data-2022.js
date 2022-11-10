@@ -14,19 +14,19 @@ export const days = [
         acts: [
           {
             name: "THE STICKMEN PROJECT",
-            time: "23 UTC",
+            time: "23:00 UTC",
           },
           {
             name: "VLADIMIR CAUCHEMAR",
-            time: "22 UTC",
+            time: "22:00 UTC",
           },
           {
             name: "ERIKA KRALL",
-            time: "21 UTC",
+            time: "21:00 UTC",
           },
           {
             name: "HANDSHAKING",
-            time: "19 UTC",
+            time: "19:00 UTC",
           },
         ],
       },
@@ -80,7 +80,7 @@ export const days = [
         acts: [
           {
             name: "MISOSHITA",
-            time: "02 UTC",
+            time: "02:00 UTC",
           },
         ],
       },
@@ -101,7 +101,7 @@ export const days = [
           },
           {
             name: "CHARLES JR.",
-            time: "23 UTC",
+            time: "23:00 UTC",
           },
           {
             name: "QUINCY",
@@ -117,7 +117,7 @@ export const days = [
           },
           {
             name: "CHARLES JR.",
-            time: "18 UTC",
+            time: "18:00 UTC",
           },
         ],
       },
@@ -126,23 +126,23 @@ export const days = [
         acts: [
           {
             name: "MEGADETH",
-            time: "23 UTC",
+            time: "23:00 UTC",
           },
           {
             name: "SKID ROW",
-            time: "22 UTC",
+            time: "22:00 UTC",
           },
           {
             name: "BLACK LABEL SOCIETY",
-            time: "21 UTC",
+            time: "21:00 UTC",
           },
           {
             name: "RAVEN AGE",
-            time: "20 UTC",
+            time: "20:00 UTC",
           },
           {
             name: "BRITOF",
-            time: "19 UTC",
+            time: "19:00 UTC",
           },
         ],
       },
@@ -151,11 +151,11 @@ export const days = [
         acts: [
           {
             name: "AZEL",
-            time: "17 UTC",
+            time: "17:00 UTC",
           },
           {
             name: "DAN: ROS",
-            time: "14 UTC",
+            time: "14:00 UTC",
           },
         ],
       },
@@ -165,7 +165,7 @@ export const days = [
         acts: [
           {
             name: "MAI LAWSON",
-            time: "00 UTC",
+            time: "00:00 UTC",
           },
           {
             name: "GLÜCK",
@@ -173,7 +173,7 @@ export const days = [
           },
           {
             name: "LOLU MENAYED",
-            time: "21 UTC",
+            time: "21:00 UTC",
           },
           {
             name: "SOUND PROCESS",
@@ -181,7 +181,7 @@ export const days = [
           },
           {
             name: "NACHO VARELA & CRUZ VITTOR",
-            time: "18 UTC",
+            time: "18:00 UTC",
           },
         ],
       },
@@ -190,11 +190,11 @@ export const days = [
         acts: [
           {
             name: "GRAMATIK + LUXAS",
-            time: "23 UTC",
+            time: "23:00 UTC",
           },
           {
             name: "NOTED",
-            time: "20 UTC",
+            time: "20:00 UTC",
           },
         ],
       },
@@ -203,27 +203,27 @@ export const days = [
         acts: [
           {
             name: "MICHELE STODDART",
-            time: "21 UTC",
+            time: "21:00 UTC",
           },
           {
             name: "LOUIE BRENNAN",
-            time: "20 UTC",
+            time: "20:00 UTC",
           },
           {
             name: "COUNTERS CREEK",
-            time: "19 UTC",
+            time: "19:00 UTC",
           },
           {
             name: "KITCHMAN SCHMIDT",
-            time: "18 UTC",
+            time: "18:00 UTC",
           },
           {
             name: "STOMPING DAVE",
-            time: "17 UTC",
+            time: "17:00 UTC",
           },
           {
             name: "MA POLAINE",
-            time: "16 UTC",
+            time: "16:00 UTC",
           },
         ],
       },
@@ -232,7 +232,7 @@ export const days = [
         acts: [
           {
             name: "ALFIE JAZZ VIDEOS",
-            time: "1am UTC",
+            time: "01:00 UTC",
           },
         ],
       },
@@ -241,11 +241,11 @@ export const days = [
         acts: [
           {
             name: "HARRISON FIRST",
-            time: "00 UTC",
+            time: "00:00 UTC",
           },
           {
             name: "TRU CLUB",
-            time: "23 UTC",
+            time: "23:00 UTC",
           },
           {
             name: "GLITCH CANDIES",
@@ -253,7 +253,7 @@ export const days = [
           },
           {
             name: "CROMULON",
-            time: "22 UTC",
+            time: "22:00 UTC",
           },
           {
             name: "SHARK",
@@ -261,7 +261,7 @@ export const days = [
           },
           {
             name: "MARCOS NAIDE",
-            time: "21 UTC",
+            time: "21:00 UTC",
           },
         ],
       },
@@ -270,7 +270,7 @@ export const days = [
         acts: [
           {
             name: "DILLON FRANCIS",
-            time: "12 UTC",
+            time: "12:00 UTC",
           },
           {
             name: "DILLON FRANCIS",
@@ -300,19 +300,19 @@ export const days = [
         acts: [
           {
             name: "YOTAM AVNI",
-            time: "02 UTC",
+            time: "02:00 UTC",
           },
           {
             name: "ZEIA",
-            time: "01 UTC",
+            time: "01:00 UTC",
           },
           {
             name: "ENDORPHIN",
-            time: "00 UTC",
+            time: "00:00 UTC",
           },
           {
             name: "VINCENZO",
-            time: "23 UTC",
+            time: "23:00 UTC",
           },
         ],
       },
@@ -321,19 +321,19 @@ export const days = [
         acts: [
           {
             name: "SHONTELLE",
-            time: "23 UTC",
+            time: "23:00 UTC",
           },
           {
             name: "PAT DIMITRI",
-            time: "22 UTC ",
+            time: "22:00 UTC ",
           },
           {
             name: "BUFALO",
-            time: "20 UTC",
+            time: "20:00 UTC",
           },
           {
             name: "ASH ORPHAN",
-            time: "18 UTC",
+            time: "18:00 UTC",
           },
         ],
       },
@@ -352,19 +352,139 @@ export const days = [
         acts: [
           {
             name: "BRELAND",
-            time: "23 UTC",
+            time: "23:00 UTC",
           },
           {
-            name: "SPOTIWIFI",
-            time: "22 UTC",
+            name: "SPOTTIE WIFI",
+            time: "22:00 UTC",
           },
           {
             name: "AMADIS AND THE AMBASSADORS",
-            time: "21 UTC",
+            time: "21:00 UTC",
           },
           {
             name: "MAIJA KAUHANEN",
-            time: "19 UTC",
+            time: "19:00 UTC",
+          },
+        ],
+      },
+      {
+        name: "SOUNDR",
+        acts: [
+          {
+            name: "IZZY BIZU",
+            time: "02:51 UTC",
+          },
+          {
+            name: "LIL YAMAHA",
+            time: "02:36 UTC",
+          },
+          {
+            name: "BENJI PATERSON",
+            time: "02:25 UTC",
+          },
+          {
+            name: "SHELF LIVES",
+            time: "02:03 UTC",
+          },
+          {
+            name: "ADS",
+            time: "02:00 UTC",
+          },
+
+          {
+            name: "JUNIOR ANDRE",
+            time: "20:52 UTC",
+          },
+          {
+            name: "LOEK",
+            time: "20:19 UTC",
+          },
+          {
+            name: "SKULLZ",
+            time: "20:19 UTC",
+          },
+          {
+            name: "THE TYNE",
+            time: "02:03 UTC",
+          },
+          {
+            name: "ADS",
+            time: "20:00 UTC",
+          },
+        ],
+      },
+      {
+        name: "Meta Tokyo",
+        acts: [
+          {
+            name: "ASA WU",
+            time: "14:00 UTC",
+          },
+        ],
+      },
+      {
+        name: "Limewire",
+        acts: [
+          {
+            name: "QUINCY",
+            time: "02:47 UTC",
+          },
+          {
+            name: "MAIA WRIGHT",
+            time: "02:27 UTC",
+          },
+          {
+            name: "DRU OLIVER",
+            time: "02:03 UTC",
+          },
+          {
+            name: "CHARLES JR.",
+            time: "02:00 UTC",
+          },
+          {
+            name: "QUINCY",
+            time: "18:47 UTC",
+          },
+          {
+            name: "MAIA WRIGHT",
+            time: "18:27 UTC",
+          },
+          {
+            name: "DRU OLIVER",
+            time: "18:03 UTC",
+          },
+          {
+            name: "CHARLES JR.",
+            time: "18:00 UTC",
+          },
+          {
+            name: "BILLYRACXX",
+            time: "23:37 UTC",
+          },
+          {
+            name: "LIL BITCOIN",
+            time: "23:19 UTC",
+          },
+          {
+            name: "HIGH TIDES",
+            time: "23:00 UTC",
+          },
+          {
+            name: "SOULJA BOY",
+            time: "19:00 UTC",
+          },
+          {
+            name: "BILLYRACXX",
+            time: "18:37 UTC",
+          },
+          {
+            name: "LIL BITCOIN",
+            time: "18:19 UTC",
+          },
+          {
+            name: "HIGH TIDES",
+            time: "18:00 UTC",
           },
         ],
       },
@@ -373,29 +493,80 @@ export const days = [
         acts: [
           {
             name: "OZZY OSBOURNE",
-            time: "0am UTC",
-          },
-          {
-            name: "SKID ROW",
-            time: "23 UTC",
-          },
-          {
-            name: "BLACK LABEL SOCIETY",
-            time: "22 UTC",
+            time: "00:00 UTC",
           },
           {
             name: "RAVEN AGE",
-            time: "20 UTC",
+            time: "20:00 UTC",
+          },
+          {
+            name: "SKID ROW",
+            time: "23:00 UTC",
           },
           {
             name: "BRITOF",
-            time: "18 UTC",
+            time: "18:00 UTC",
+          },
+        ],
+      },
+      {
+        name: "OVER",
+        acts: [
+          {
+            name: "JAMIS",
+            time: "17:00 UTC",
+          },
+        ],
+      },
+      {
+        name: "RANDOM RAVERS",
+        acts: [
+          {
+            name: "UNTZ KING",
+            time: "20:30 UTC",
+          },
+          {
+            name: "MERIO BRAS",
+            time: "19:45 UTC ",
+          },
+          {
+            name: "0XPET3R",
+            time: "19:00 UTC",
+          },
+        ],
+      },
+      {
+        name: "Party Degenerates",
+        acts: [
+          {
+            name: "DISCO BISCUITS",
+            time: "01:30 UTC",
+          },
+          {
+            name: "KINGSTARLIGHT",
+            time: "00:20 UTC",
+          },
+          {
+            name: "SALEM ILESE",
+            time: "00:00 UTC",
+          },
+          {
+            name: "BONNIE & CLYDE",
+            time: "21:30 UTC",
+          },
+          {
+            name: "LUM feat. MADS PAIGE",
+            time: "20:00 UTC",
           },
         ],
       },
       {
         name: "KRAKEN AFTER PARTY",
         acts: [
+          {
+            name: "CJ TRAXX",
+            time: "0:00 UTC",
+          },
           {
             name: "HARRISON FIRST",
             time: "23:40 UTC",
@@ -407,27 +578,27 @@ export const days = [
         acts: [
           {
             name: "OUR MAN IN THE FIELD",
-            time: "21 UTC",
+            time: "21:00 UTC",
           },
           {
             name: "JACK HARRIS",
-            time: "20 UTC",
+            time: "20:00 UTC",
           },
           {
             name: "ROB CORCORAN",
-            time: "19 UTC",
+            time: "19:00 UTC",
           },
           {
             name: "JAMES RILEY",
-            time: "18 UTC",
+            time: "18:00 UTC",
           },
           {
             name: "DRAIN AND FARRIS",
-            time: "17 UTC",
+            time: "17:00 UTC",
           },
           {
             name: "BUFFOS WAKE",
-            time: "16 UTC",
+            time: "16:00 UTC",
           },
         ],
       },
@@ -436,7 +607,7 @@ export const days = [
         acts: [
           {
             name: "ANETA WARDELL",
-            time: "1am UTC",
+            time: "01:00 UTC",
           },
         ],
       },
@@ -444,12 +615,12 @@ export const days = [
         name: "OG COMMUNITY STAGE",
         acts: [
           {
-            name: "SERENA ELIS",
-            time: "0am UTC",
+            name: "HARRISON FIRST",
+            time: "0:00 UTC",
           },
           {
             name: "ECLECTIC METHOD",
-            time: "23 UTC",
+            time: "23:00 UTC",
           },
           {
             name: "ALP",
@@ -457,7 +628,7 @@ export const days = [
           },
           {
             name: "BUFALO",
-            time: "22 UTC",
+            time: "22:00 UTC",
           },
           {
             name: "STONEY EYE",
@@ -465,17 +636,13 @@ export const days = [
           },
           {
             name: "GUCCI TOE",
-            time: "21 UTC",
+            time: "21:00 UTC",
           },
         ],
       },
       {
         name: "DILLON FRANCIS",
         acts: [
-          {
-            name: "DILLON FRANCIS",
-            time: "12 UTC",
-          },
           {
             name: "DILLON FRANCIS",
             time: "ALL DAY",
@@ -500,19 +667,23 @@ export const days = [
         ],
       },
       {
-        name: "RANDOM RAVERS",
+        name: "Techno Stage",
         acts: [
           {
-            name: "UNTZ KING",
-            time: "20:30 UTC",
+            name: "OMER BAR",
+            time: "02:00 UTC",
           },
           {
-            name: "MERIO BRAS",
-            time: "19:45 UTC ",
+            name: "KADOSH",
+            time: "01:00 UTC",
           },
           {
-            name: "0XPET3R",
-            time: "19 UTC",
+            name: "ALIENTRAK",
+            time: "00:00 UTC",
+          },
+          {
+            name: "AIWASKA",
+            time: "23:00 UTC",
           },
         ],
       },
@@ -521,23 +692,23 @@ export const days = [
         acts: [
           {
             name: "DOMINO",
-            time: "2am UTC",
+            time: "02:00 UTC",
           },
           {
             name: "CROMULON",
-            time: "0am UTC ",
+            time: "00:00 UTC ",
           },
           {
             name: "AMBIENFT",
-            time: "19 UTC",
+            time: "19:00 UTC",
           },
           {
             name: "NIFTY SAX",
-            time: "18 UTC",
+            time: "18:00 UTC",
           },
           {
             name: "PHUTURE",
-            time: "17 UTC",
+            time: "17:00 UTC",
           },
         ],
       },
