@@ -11,6 +11,7 @@ export const StageTitle = styled.h3`
   font-size: 32px;
   line-height: 28px;
   letter-spacing: 0.22em;
+  text-transform: uppercase;
 
   padding-top: 80px;
   color: ${theme.accent};
