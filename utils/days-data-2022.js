@@ -730,7 +730,7 @@ export const days = [
             time: "22:00 UTC",
           },
           {
-            name: "'2AM + PIP",
+            name: "2AM + PIP",
             time: "21:00 UTC",
           },
           {
