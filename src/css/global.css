@@ -9,15 +9,14 @@
 
 * {
   color: white;
-
 }
 
-.react-multi-carousel-list{
+.react-multi-carousel-list {
   position: unset !important;
 }
 
 *::selection {
-  background:transparent;
+  background: transparent;
 }
 
 html {

@@ -1,6 +1,6 @@
 import React from "react";
 import theme from "../../../utils/theme";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import "../../css/stylesheet.css";
 import { StyledLayout } from "./styles";
 

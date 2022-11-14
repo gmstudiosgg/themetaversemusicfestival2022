@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import theme, { breakpoints } from "../../../utils/theme";
 
 export const StyledBanner = styled.div`
   z-index: 9999;

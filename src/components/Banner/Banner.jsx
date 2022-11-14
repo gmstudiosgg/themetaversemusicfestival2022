@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactPlayer from "react-player";
 import volumeMuted from "../../images/volume-muted.svg";
 import volume from "../../images/volume.svg";

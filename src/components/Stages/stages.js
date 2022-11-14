@@ -11,7 +11,6 @@ import kraken from "../../images/stages/kraken.png";
 import oxArena from "../../images/stages/oxArena.png";
 import limewire from "../../images/stages/limewire.png";
 
-
 export default [
   {
     name: "Ozzfest",

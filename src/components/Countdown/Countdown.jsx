@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "gatsby";
 import { StyledCountdown } from "./styles";
 
 const Countdown = () => {

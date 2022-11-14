@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+import React from "react";
 import { Discord } from "../icons/Vector-Discord.js";
 import { Twitter } from "../icons/Vector-Twitter.js";
-import { OpenSea } from "../icons/Vector-openSea.js";
-import theme, { breakpoints } from "../../../utils/theme";
 import dclLogo from "../../images/logo-dcl.svg";
 import { Instagram } from "../icons/Vector-Instagram.js";
 
@@ -52,7 +49,11 @@ const Footer = (props) => {
   return (
     <StyledFooter>
       <StyledLogoContainer>
-        <a href="https://play.decentraland.org/" target="_blank">
+        <a
+          href="https://play.decentraland.org/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <StyledLogo alt={"Decentraland Logo"} src={dclLogo} />
         </a>
       </StyledLogoContainer>
@@ -60,7 +61,7 @@ const Footer = (props) => {
         <StyledLinksList>
           {pages.map((page) => (
             <PageLink key={page.name}>
-              <a target="_blank" href={page.url}>
+              <a target="_blank" href={page.url} rel="noreferrer">
                 {page.name}
               </a>
             </PageLink>
@@ -71,7 +72,7 @@ const Footer = (props) => {
         <StyledSocialLinks>
           {socialLinks.map(({ name, url, file: File }) => (
             <StyledSocialLink key={name}>
-              <a height={100} target="_blank" href={url}>
+              <a height={100} target="_blank" href={url} rel="noreferrer">
                 <File />
                 {/* <img src={socialLink.file} width={24} height={24} /> */}
               </a>

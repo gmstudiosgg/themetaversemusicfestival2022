@@ -807,8 +807,8 @@ export const days = [
         acts: [
           {
             name: "KYARY PAMYU PAMYU",
-            time: "14:00 UTC"
-          }
+            time: "14:00 UTC",
+          },
         ],
       },
       {
@@ -1519,12 +1519,10 @@ export const days = [
           {
             name: "STEVE SAI",
             time: "01:00 UTC",
-
           },
           {
             name: "MARC ROMBOY",
             time: "00:00 UTC",
-
           },
           {
             name: "FURIA",

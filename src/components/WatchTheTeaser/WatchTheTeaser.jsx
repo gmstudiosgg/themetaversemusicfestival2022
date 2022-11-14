@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import BannerMarquee from "../Marquee/Marquee";
 import { TextHighlight, WatchTeaser } from "./styles";
 

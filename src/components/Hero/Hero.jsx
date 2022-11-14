@@ -1,17 +1,15 @@
 import React from "react";
-import mvmfLogo from "../../images/logo-metaverse.png";
 import dclLogo from "../../images/logo-dcl.svg";
 import star from "../../images/star.svg";
 import whiteRabbit from "../../images/rabbit.svg";
 import polygon from "../../images/STD-polygon.svg";
-import Countdown from "../Countdown/Countdown";
+// import Countdown from "../Countdown/Countdown";
 import { Container } from "../Container";
 import ReactPlayer from "react-player";
 
 import {
   StyledHero,
   LogoContainer,
-  StyledVideo,
   EventDetails,
   EventData,
   EventDataBottom,
@@ -55,7 +53,11 @@ const Hero = () => {
           </EventData>
           <EventDataBottom>
             <EventDataItem>
-              <a href="https://play.decentraland.org/" target="_blank">
+              <a
+                href="https://play.decentraland.org/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <StyledLogo alt={"Decentraland Logo"} src={dclLogo} />
               </a>
             </EventDataItem>

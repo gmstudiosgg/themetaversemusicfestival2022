@@ -54,7 +54,7 @@ export const StyledActInfoTitle = styled.div`
   letter-spacing: 0.22em;
   width: auto;
   margin-bottom: 8px;
-  
+
   @media screen and (min-width: ${breakpoints.md}) {
     font-size: 32px;
     line-height: 28px;
