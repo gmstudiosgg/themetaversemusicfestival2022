@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import 'react-multi-carousel/lib/styles.css';
+import "react-multi-carousel/lib/styles.css";
 import { Helmet } from "react-helmet";
-import Layout from "./../components/Layout";
-import Hero from "./../components/Hero";
-import Banner from "../components/Banner";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import BannerMarquee from "../components/Marquee";
-import WatchTheTeaser from "../components/WatchTheTeaser";
+import Layout from "../components/Layout/Layout";
+import Hero from "../components/Hero/Hero";
+import Banner from "../components/Banner/Banner";
+import Footer from "../components/Footer/Footer";
+import Navbar from "../components/Navbar/Navbar";
+import BannerMarquee from "../components/Marquee/Marquee";
+import WatchTheTeaser from "../components/WatchTheTeaser/WatchTheTeaser";
 import About from "../components/About";
 import Faq from "../components/Faq";
 import Sitemap from "../components/Sitemap";
@@ -16,7 +16,7 @@ import Stages from "../components/Stages";
 import Partners from "../components/Partners";
 import Experiences from "../components/Experiences";
 import MerchBanner from "../components/MerchBanner";
-import merchBanner from "../images/merch-banner.png"
+import merchBanner from "../images/merch-banner.png";
 import LineUpSchedule from "../components/LineUpSchedule";
 
 const seo = {
@@ -41,15 +41,14 @@ const meta = {
 
 // markup
 const IndexPage = () => {
-  const [showVideo, setShowVideo] = useState(false)
-  const [muted, setMuted] = useState(true)
+  const [showVideo, setShowVideo] = useState(false);
+  const [muted, setMuted] = useState(true);
 
   useEffect(() => {
-    if(!localStorage.getItem('hasWatchedVideo')) {
-      setShowVideo(true)
+    if (!localStorage.getItem("hasWatchedVideo")) {
+      setShowVideo(true);
     }
-  }, [])
-
+  }, []);
 
   return (
     <StyledIndexPage>
@@ -100,7 +99,13 @@ const IndexPage = () => {
           <Hero />
         </header>
         <main>
-          {showVideo && <Banner muted={muted} setMuted={setMuted} setShowVideo={setShowVideo} />}
+          {showVideo && (
+            <Banner
+              muted={muted}
+              setMuted={setMuted}
+              setShowVideo={setShowVideo}
+            />
+          )}
           <BannerMarquee />
           <About />
           <BannerMarquee />
@@ -109,7 +114,11 @@ const IndexPage = () => {
           <Stages />
           <Experiences />
           <BannerMarquee noBorderBottom />
-          <MerchBanner src={merchBanner} href="https://market.decentraland.org/MVMF22?assetType=item&section=wearables&vendor=decentraland&page=1&sortBy=recently_listed&onlyOnSale=true" target="_blank" />
+          <MerchBanner
+            src={merchBanner}
+            href="https://market.decentraland.org/MVMF22?assetType=item&section=wearables&vendor=decentraland&page=1&sortBy=recently_listed&onlyOnSale=true"
+            target="_blank"
+          />
           <BannerMarquee noBorderTop direction="right" />
           <Sitemap />
           <BannerMarquee />
