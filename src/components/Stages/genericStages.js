@@ -1,6 +1,4 @@
-import main from "../../images/stages/main.png";
 import district from "../../images/stages/district.png";
-// import soundr from '../../images/stages/soundR.png';
 import truband from "../../images/stages/truband.png";
 import rare from "../../images/stages/rare.png";
 import soundr from "../../images/stages/soundr.png";

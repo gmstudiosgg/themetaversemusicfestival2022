@@ -17,36 +17,78 @@ const About = (props) => {
           <AboutHeader>
             {" "}
             <AboutTitle src={AboutTitleImg} />
-            <RabbitAnimation src={Rabbit} alt="Follow the white rabbit" width={200} />
+            <RabbitAnimation
+              src={Rabbit}
+              alt="Follow the white rabbit"
+              width={200}
+            />
           </AboutHeader>
           <Aboutbody>
             <AboutBodyImgContainer>
               <AboutBodyImg>
                 <AboutBodyCodebar src={AboutThinIcon} />
                 <AboutMobileBodyCodebar src={AboutMobileThinIcon} />
-                <AboutBodyIlluminati src={EyeTriengleIcon} width="76px" height="76px" />
+                <AboutBodyIlluminati
+                  src={EyeTriengleIcon}
+                  width="76px"
+                  height="76px"
+                />
               </AboutBodyImg>
             </AboutBodyImgContainer>
             <AboutBodyText>
               <AboutBodyParagraph>
-                #DCLMVMF22 is a four-day celebration of <TextHighlight>music</TextHighlight>, <TextHighlight>innovation</TextHighlight>, <TextHighlight>culture</TextHighlight> and <TextHighlight>creativity</TextHighlight>, held online in the virtual social world of Decentraland. The festival is open for any and all to attend, no ticket or VR headset required.
+                #DCLMVMF22 is a four-day celebration of{" "}
+                <TextHighlight>music</TextHighlight>,{" "}
+                <TextHighlight>innovation</TextHighlight>,{" "}
+                <TextHighlight>culture</TextHighlight> and{" "}
+                <TextHighlight>creativity</TextHighlight>, held online in the
+                virtual social world of Decentraland. The festival is open for
+                any and all to attend, no ticket or VR headset required.
                 <br />
                 <br />
-                Prepare yourself for a musical experience unlike any you’ve attended before:
+                Prepare yourself for a musical experience unlike any you’ve
+                attended before:
                 <ul>
-                  <li><TextHighlight>Explore the futuristic</TextHighlight>, <TextHighlight>cyberpunk festival grounds </TextHighlight>and become familiar with 15 different stages of the like you’d never see IRL</li>
-                  <li> Check the schedule of <TextHighlight>150+ global artists</TextHighlight> from across genres featuring names such as <TextHighlight>Ozzy Ozbourne</TextHighlight>, <TextHighlight>Soulja Boy</TextHighlight>, <TextHighlight>Dillon Fancis</TextHighlight>, and main headliner <TextHighlight>Björk</TextHighlight> who’s closing act you will NOT want to miss</li>
-                  <li>Dive into numerous Decentraland <TextHighlight><a href="#experiences">experiences</a></TextHighlight> as you peek into portaloos, take on the quest for a backstage pass, chase a white rabbit, and feel connected at the Tower of Babel</li>
+                  <li>
+                    <TextHighlight>Explore the futuristic</TextHighlight>,{" "}
+                    <TextHighlight>cyberpunk festival grounds </TextHighlight>
+                    and become familiar with 15 different stages of the like
+                    you’d never see IRL
+                  </li>
+                  <li>
+                    {" "}
+                    Check the schedule of{" "}
+                    <TextHighlight>150+ global artists</TextHighlight> from
+                    across genres featuring names such as{" "}
+                    <TextHighlight>Ozzy Ozbourne</TextHighlight>,{" "}
+                    <TextHighlight>Soulja Boy</TextHighlight>,{" "}
+                    <TextHighlight>Dillon Fancis</TextHighlight>, and main
+                    headliner <TextHighlight>Björk</TextHighlight> who’s closing
+                    act you will NOT want to miss
+                  </li>
+                  <li>
+                    Dive into numerous Decentraland{" "}
+                    <TextHighlight>
+                      <a href="#experiences">experiences</a>
+                    </TextHighlight>{" "}
+                    as you peek into portaloos, take on the quest for a
+                    backstage pass, chase a white rabbit, and feel connected at
+                    the Tower of Babel
+                  </li>
                   <li>And much more!</li>
                 </ul>
                 <br />
                 <br />
-                So get yourself some kaleidoscopic Wearables and killer dance Emotes in the Marketplace Festival Tab and jump into Decentraland on November 10.
-
+                So get yourself some kaleidoscopic Wearables and killer dance
+                Emotes in the Marketplace Festival Tab and jump into
+                Decentraland on November 10.
               </AboutBodyParagraph>
             </AboutBodyText>
           </Aboutbody>
-          <AboutButtonContainer href="https://play.decentraland.org/?position=-62%2C63&realm=marvel&island=Ic5t9" target="_blank">
+          <AboutButtonContainer
+            href="https://play.decentraland.org/?position=-62%2C63&realm=marvel&island=Ic5t9"
+            target="_blank"
+          >
             <AboutButtonLink>
               ENTER THE FESTIVAL
               <ButtonDecorator src={Logo} />
@@ -59,7 +101,7 @@ const About = (props) => {
 };
 
 const Section = styled.section`
-position: relative;
+  position: relative;
 `;
 
 const StyledAbout = styled.div`
@@ -97,7 +139,7 @@ const RabbitAnimation = styled.img`
   @media screen and (min-width: ${breakpoints.md}) {
     display: block;
   }
-`
+`;
 
 const Aboutbody = styled.section`
   display: flex;
@@ -125,22 +167,22 @@ const AboutBodyIlluminati = styled.img`
   display: none;
   @media screen and (min-width: ${breakpoints.md}) {
     display: block;
-    padding
+    padding: 0px;
   }
 `;
 
 const AboutBodyText = styled.div`
-letter-spacing: 0.1em;
-font-weight: 300;
-margin-left: 8px;
-@media screen and (min-width: ${breakpoints.md}) {
-  margin-left: 120px;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 400;
-  padding-right: 64px;
-  max-width: 700px;
-}
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  margin-left: 8px;
+  @media screen and (min-width: ${breakpoints.md}) {
+    margin-left: 120px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    padding-right: 64px;
+    max-width: 700px;
+  }
 `;
 
 const AboutBodyParagraph = styled.p`
@@ -170,7 +212,7 @@ const AboutBodyImgContainer = styled.div`
 `;
 
 const AboutBodyImg = styled.div`
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -234,11 +276,8 @@ const AboutButtonLink = styled.button`
 
   &:hover {
     color: black;
-    background: url('/texture.png');
-    box-shadow:
-          0 0 20px #fff,
-          0 0 10px violet,
-          0 0 5px blue;
+    background: url("/texture.png");
+    box-shadow: 0 0 20px #fff, 0 0 10px violet, 0 0 5px blue;
 
     img {
       -webkit-animation: rotating 10s linear infinite;
@@ -246,7 +285,7 @@ const AboutButtonLink = styled.button`
       -ms-animation: rotating 10s linear infinite;
       -o-animation: rotating 10s linear infinite;
       animation: rotating 10s linear infinite;
-    
+
       @keyframes rotating {
         from {
           transform: rotate(0deg);
@@ -261,7 +300,7 @@ const AboutButtonLink = styled.button`
   @media screen and (min-width: ${breakpoints.md}) {
     font-size: 22px;
     padding: 48px 72px;
-    
+
     img {
       -webkit-animation: unset;
       -moz-animation: unset;
@@ -283,7 +322,7 @@ const ButtonDecorator = styled.img`
     height: 52px;
     top: 0;
     right: -5px;
-}
-`
+  }
+`;
 
 export default About;

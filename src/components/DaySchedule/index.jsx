@@ -1,22 +1,14 @@
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
-import { StaticImage } from "gatsby-plugin-image";
+import React from "react";
 import StageSchedule from "../StageSchedule";
-import { breakpoints } from "../../../utils/theme";
 import {
   StyledDaySchedule,
   StyledDayBody,
   StyledDayHeader,
   StyledDayTitle,
-  StyledDayinfo,
 } from "./styles.js";
-import {
-  StyledBodyBtnSection,
-  StyledArrowBtn,
-} from "../LineUpSchedule/styles.js";
 
 const DaySchedule = (props) => {
-  const { dayInfo, dayNumber } = props;
+  const { dayInfo } = props;
 
   return (
     <StyledDaySchedule>

@@ -96,15 +96,12 @@
   src: url(./../fonts/Yapari-ExtraBold.ttf);
 }
 
-
-
 @font-face {
   font-family: "Gotham";
   font-style: normal;
   font-weight: 300;
   src: url(./../fonts/Gotham-Light.otf);
 }
-
 
 @font-face {
   font-family: "Gotham";

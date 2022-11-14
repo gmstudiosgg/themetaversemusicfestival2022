@@ -1,31 +1,8 @@
-import * as React from "react";
 import styled from "styled-components";
-import theme, { breakpoints } from "../../utils/theme";
-import bgImage from "../images/boton.png";
+import theme, { breakpoints } from "../../../utils/theme";
+import bgImage from "../../images/boton.png";
 
-const Button = ({
-  onClick,
-  type,
-  className,
-  href,
-  download,
-  children,
-  ...rest
-}) => {
-  return (
-    <StyledButton
-      onClick={onClick && onClick}
-      href={href}
-      download={download}
-      style={{ backgroundImage: "../images/boton.png" }}
-      {...rest}
-    >
-      {children}
-    </StyledButton>
-  );
-};
-
-const StyledButton = styled.a`
+export const StyledButton = styled.a`
   font-family: "Yapari";
   height: 60px;
   padding: 0 32px;
@@ -44,14 +21,14 @@ const StyledButton = styled.a`
   background-size: 100% 100%;
   background-repeat: no-repeat;
   @media screen and (max-width: ${breakpoints.md}) {
-      font-size: 14px;
-      height: 48px;
-      line-height: 48px;
-      padding: 0 18px;
-  };
+    font-size: 14px;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 18px;
+  }
   @media screen and (min-width: ${breakpoints.md}) {
     min-width: 350px;
-};
+  }
   :hover {
     color: ${theme.accent};
   }
@@ -61,5 +38,3 @@ const StyledButton = styled.a`
     }
   }
 `;
-
-export default Button;
